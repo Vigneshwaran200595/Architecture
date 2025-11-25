@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Stackly Architecture</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/contact.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar d-none d-xl-block w-100">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                  <div class="d-flex flex-wrap">
+    <span class="text-muted me-4">
+        <i class="fas fa-map-marker-alt text-secondary me-2"></i>
+        Salem, Tamilnadu
+    </span>
+
+    <span class="text-muted me-4">
+        <i class="fas fa-phone-alt text-secondary me-2"></i>
+        +01234567890
+    </span>
+
+    <span class="text-muted me-0">
+        <i class="fas fa-envelope text-secondary me-2"></i>
+        Example@gmail.com
+    </span>
+</div>
+
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="text-muted me-3">
+            <i class="fas fa-clock text-secondary me-2"></i>
+            Mon - Sat 8:00 - 17:30, Sunday - CLOSED
+        </span>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
+</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+<div class="nav-item custom-home dropdown">
+    <a href="index.html" class="home-link">Home</a>
+    <span class="arrow-toggle"></span>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="saas.html">Home 2</a>
+    </div>
+</div>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
+                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
+                        <a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </div>        <!-- Navbar & Hero End -->
+
+<section class="about-hero">
+    <div class="about-hero-content scroll-animate fadeInTopLeft">
+        <h1>Contact Us</h1>
+        <p>
+            The essence of interior design will always be about people and how they live. It is about the realities of what makes for an attractive, civilized.
+        </p>
+
+        <div class="breadcrumb-box scroll-animate fadeInTopLeft">
+            <a href="index.html">Home</a>
+            <span>»</span>
+            <span class="active">Contact</span>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+    <div class="contact-left scroll-animate fadeInTopLeft">
+        <h2 class="box-title">Form <span>—</span></h2>
+
+        <form id="contactForm">
+            <label>Name</label>
+            <input type="text" id="name">
+
+            <label>Email</label>
+            <input type="text" id="email">
+
+            <label>Message</label>
+            <textarea id="message"></textarea>
+
+            <p class="error-text" id="error-msg"></p>
+
+            <button type="submit" class="submit-btn">SUBMIT</button>
+        </form>
+    </div>
+
+    <div class="contact-right scroll-animate fadeInTopRight">
+        <h2 class="box-title">Info <span>—</span></h2>
+
+        <div class="info-item">
+            <i class="fa fa-phone"></i>
+            <div>
+                <strong>Phone number</strong>
+                <p>+91 1234567890</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fa fa-envelope"></i>
+            <div>
+                <strong>Email address</strong>
+                <p>support@domain.com</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <i class="fa fa-map-marker"></i>
+            <div>
+                <strong>Address info</strong>
+                <p>Salem, Tamilnadu, India.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAP SECTION START -->
+<section class="map-section scroll-animate fadeInTopLeft">
+    <h2 class="map-title">Find Us Our Company</h2>
+
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.185031846891!2d78.14001727418751!3d11.66432558854408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bac71f8390f9c89%3A0x7b13ca96344cba97!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1703149000000!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+<!-- MAP SECTION END -->
+
+<footer class="footer-section">
+    <div class="footer-container">
+
+        <!-- Left Logo & Text -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <img src="img/logo2.webp" class="footer-logo" alt="">
+            <p class="footer-text">
+                Crafted specifically for architecture and interior design studios, our template helps you showcase ideas with clarity and elegance.
+            </p>
+
+            <div class="footer-social scroll-animate fadeInTopLeft">
+                <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Recent Post -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <h3 class="footer-title">Recent Post</h3>
+
+            <div class="post-item">
+                <div class="post-date">
+                    15 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    On these beams, we’re.
+                    <div class="post-meta">By Admin – 28</div>
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-date">
+                    17 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    We’ll be a sensation for
+                    <div class="post-meta">By Admin – 29</div>
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-date">
+                    18 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    We’ll be a sensation for
+                    <div class="post-meta">By Admin – 29</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Useful Links -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <h3 class="footer-title">Quick links</h3>
+
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <h3 class="footer-title">Contact Us</h3>
+
+            <p class="contact-text">
+                Salem, Tamilnadu, India.
+            </p>
+
+            <p class="contact-text">support@domain.com</p>
+
+            <p class="contact-text">+91 1234567890</p>
+
+            <p class="contact-text">+91 0987654321</p>
+        </div>
+    </div>
+
+    <!-- Newsletter Row -->
+    <div class="newsletter-row scroll-animate fadeInTopLeft">
+        <div class="newsletter-left">
+            <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
+            <p>Never Miss Anything From Stackly By Signing Up To Our Newsletter.</p>
+        </div>
+
+   <div class="newsletter-box">
+    <input type="email" id="newsletterEmail" placeholder="ENTER YOUR EMAIL">
+    <button onclick="subscribeNewsletter()">✈</button>
+</div>
+    </div>
+
+    <div class="footer-bottom scroll-animate fadeInTopLeft">
+        © 2025 Your Company. Designed By Stackly.
+    </div>
+
+</footer>
+
+
+
+<script>
+function subscribeNewsletter() {
+
+    const emailInput = document.getElementById("newsletterEmail");
+    const email = emailInput.value.trim();
+
+    function clearError() {
+        emailInput.classList.remove("error");
+        emailInput.placeholder = "ENTER YOUR EMAIL";
+    }
+
+    // Reset before validation
+    clearError();
+
+    // Empty field check
+    if (email === "") {
+        emailInput.classList.add("error");
+        emailInput.value = "";
+        emailInput.placeholder = "Please fill the email field";
+
+        setTimeout(clearError, 2000);
+        return;
+    }
+
+    // Email regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Invalid email check
+    if (!emailPattern.test(email)) {
+        emailInput.classList.add("error");
+        emailInput.value = "";
+        emailInput.placeholder = "Enter a valid email address";
+
+        setTimeout(clearError, 2000);
+        return;
+    }
+
+    // Valid email → redirect
+    window.location.href = "404.html";
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const arrow = document.querySelector(".custom-home .arrow-toggle");
+    const menu = document.querySelector(".custom-home .dropdown-menu");
+    const homeLink = document.querySelector(".custom-home .home-link");
+
+    if (window.innerWidth < 992) {
+
+        // FIX: Prevent arrow click from triggering Home link
+        arrow.addEventListener("click", function(e){
+            e.preventDefault();      // stop navigation
+            e.stopPropagation();     // stop bubbling to <a>
+            menu.classList.toggle("show");
+        });
+
+        // Ensure clicking Home still goes to index.html
+        homeLink.addEventListener("click", function(e){
+            menu.classList.remove("show");
+        });
+    }
+});
+</script>
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let error = document.getElementById("error-msg");
+
+    // Show Error Function
+    function showError(msg) {
+        error.textContent = msg;
+        error.style.opacity = "1";
+
+        // Auto-hide after 2 seconds
+        setTimeout(() => {
+            error.style.opacity = "0";
+            error.textContent = "";
+        }, 2000);
+    }
+
+    // Empty field validation
+    if (name === "" || email === "" || message === "") {
+        showError("Please fill all the fields.");
+        return;
+    }
+
+    // Email format validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        showError("Please enter a valid email address.");
+        return;
+    }
+
+    // Success → Redirect
+    window.location.href = "404.html";
+});
+</script>
+
+    <script>
+const elements = document.querySelectorAll(".scroll-animate");
+
+function scrollAnimation() {
+    let triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", scrollAnimation);
+scrollAnimation();
+</script>
+
+
+    </body>
+
+</html>
