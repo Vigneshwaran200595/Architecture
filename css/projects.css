@@ -1,0 +1,136 @@
+/* GRAPHS SECTION */
+.project-graphs {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* TABLE SECTION */
+.project-table-box {
+    margin-top: 50px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.project-table-box h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.project-table th {
+    background: #d48a42;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+.project-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* STATUS BADGES */
+.complete {
+    color: green;
+    font-weight: 700;
+}
+
+.progress {
+    color: orange;
+    font-weight: 700;
+}
+
+.pending {
+    color: red;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .project-graphs {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-table-box {
+        padding: 20px;
+    }
+
+    .project-table th,
+    .project-table td {
+        font-size: 14px;
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease-out;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FADE IN */
+.fadeIn {
+    transform: none;
+}
+
+/* FADE IN UP */
+.fadeInUp {
+    transform: translateY(30px);
+}
+.fadeInUp.active {
+    transform: translateY(0);
+}
+
+/* FADE IN DOWN */
+.fadeInDown {
+    transform: translateY(-30px);
+}
+.fadeInDown.active {
+    transform: translateY(0);
+}
+
+/* FADE IN TOP LEFT */
+.fadeInTopLeft {
+    transform: translate(-30px,-30px);
+}
+.fadeInTopLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN TOP RIGHT */
+.fadeInTopRight {
+    transform: translate(30px,-30px);
+}
+.fadeInTopRight.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM LEFT */
+.fadeInBottomLeft {
+    transform: translate(-30px,30px);
+}
+.fadeInBottomLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM RIGHT */
+.fadeInBottomRight {
+    transform: translate(30px,30px);
+}
+.fadeInBottomRight.active {
+    transform: translate(0,0);
+}

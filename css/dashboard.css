@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden; /* IMPORTANT fix */
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #1a1c20;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 20px;
+    overflow-y: auto;
+}
+
+.logo-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 150px;
+}
+
+
+/* MENU */
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    background: #262a2f;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu li:hover,
+.menu .active {
+    background: #d48a42;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+    background: #f5f5f5;
+    min-height: 100vh;
+    overflow-x: hidden; /* fix scroll */
+}
+
+/* TOP BAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* HOME BUTTON */
+.home-btn {
+    background: #d48a42;
+    padding: 10px 22px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.home-btn:hover {
+    background: #b87332;
+}
+
+/* ADMIN PIC */
+.admin-pic {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 3px solid #d48a42;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-left: 6px solid #d48a42;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 34px;
+}
+
+/* GRAPHS */
+.graph-section {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.graph-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+
+/* HIDE mobile-header by default on desktop */
+.mobile-header {
+    display: none;
+}
+
+/* ==========================================
+        📱 MOBILE RESPONSIVE FIX
+========================================== */
+@media (max-width: 768px) {
+
+    /* Hide desktop sidebar completely */
+    .sidebar {
+        display: none !important;
+    }
+
+    /* Show mobile header */
+    .mobile-header {
+        display: block;
+        background: #1a1c20;
+        padding: 20px 15px;
+        width: 100%;
+        color: #fff;
+    }
+
+    /* MOBILE LOGO */
+    .mobile-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+
+    .mobile-logo img {
+        width: 130px;
+    }
+
+    /* MOBILE HORIZONTAL MENU */
+/* Mobile Horizontal Menu - 3 items on first row, 2 on second */
+.mobile-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;        /* IMPORTANT – wraps to next row */
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.mobile-menu li {
+    background: #262a2f;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+    color: #fff;
+    flex: 0 0 calc(33.33% - 12px); /* 3 items per row */
+    text-align: center;
+}
+
+
+    .mobile-menu li:hover,
+    .mobile-menu .active {
+        background: #d48a42;
+    }
+
+    /* MAIN CONTENT full width on mobile */
+    .main-content {
+        margin-left: 0 !important;
+        padding: 20px;
+    }
+
+    /* Cards become 1-column */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Charts become 1-column */
+    .graph-section {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-menu li:nth-last-child(1),
+.mobile-menu li:nth-last-child(2) {
+    flex: 0 0 calc(50% - 12px); /* 2 items in bottom row */
+}
+
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease-out;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FADE IN */
+.fadeIn {
+    transform: none;
+}
+
+/* FADE IN UP */
+.fadeInUp {
+    transform: translateY(30px);
+}
+.fadeInUp.active {
+    transform: translateY(0);
+}
+
+/* FADE IN DOWN */
+.fadeInDown {
+    transform: translateY(-30px);
+}
+.fadeInDown.active {
+    transform: translateY(0);
+}
+
+/* FADE IN TOP LEFT */
+.fadeInTopLeft {
+    transform: translate(-30px,-30px);
+}
+.fadeInTopLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN TOP RIGHT */
+.fadeInTopRight {
+    transform: translate(30px,-30px);
+}
+.fadeInTopRight.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM LEFT */
+.fadeInBottomLeft {
+    transform: translate(-30px,30px);
+}
+.fadeInBottomLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM RIGHT */
+.fadeInBottomRight {
+    transform: translate(30px,30px);
+}
+.fadeInBottomRight.active {
+    transform: translate(0,0);
+}

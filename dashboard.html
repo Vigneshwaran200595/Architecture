@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture Admin Dashboard</title>
+<link rel="stylesheet" href="css/dashboard.css">
+
+<!-- CHART JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<!-- MOBILE HEADER (Visible only on Mobile) -->
+<div class="mobile-header">
+    
+    <!-- Mobile Logo -->
+    <div class="mobile-logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Mobile Horizontal Sidebar -->
+    <ul class="mobile-menu">
+        <li class="active">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+    </ul>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <!-- LOGO ONLY -->
+    <div class="logo-box">
+        <a href="index.html">
+            <img src="img/logo.webp" class="logo" alt="Logo">
+        </a>
+    </div>
+
+
+    <ul class="menu">
+        <li class="active">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <h1>Dashboard</h1>
+
+        <div class="top-right">
+            <a href="index.html" class="home-btn">Home</a>
+            <img src="img/profile2.webp" class="admin-pic" alt="">
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="cards">
+        <div class="card">
+            <h3>Projects</h3>
+            <h2>145</h2>
+        </div>
+
+        <div class="card">
+            <h3>Clients</h3>
+            <h2>320</h2>
+        </div>
+
+        <div class="card">
+            <h3>Revenue</h3>
+            <h2>$85K</h2>
+        </div>
+
+        <div class="card">
+            <h3>Team Members</h3>
+            <h2>42</h2>
+        </div>
+    </div>
+
+    <!-- GRAPHS -->
+    <div class="graph-section">
+
+        <div class="graph-box">
+            <h3>Visitors Overview</h3>
+            <canvas id="visitorsChart"></canvas>
+        </div>
+
+        <div class="graph-box">
+            <h3>Projects Completed</h3>
+            <canvas id="projectChart"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CHART SCRIPTS -->
+<script>
+/* VISITOR LINE GRAPH */
+const ctx = document.getElementById('visitorsChart').getContext('2d');
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan','Feb','Mar','Apr','May','Jun'],
+        datasets: [{
+            label: 'Visitors',
+            data: [120, 170, 135, 210, 250, 290],
+            borderWidth: 3,
+            borderColor: '#d48a42',
+            backgroundColor: 'rgba(212,138,66,0.3)',
+            tension: 0.4,
+            pointRadius: 6,
+            pointBackgroundColor: '#d48a42'
+        }]
+    }
+});
+
+/* PROJECT BAR GRAPH */
+const bar = document.getElementById('projectChart').getContext('2d');
+new Chart(bar, {
+    type: 'bar',
+    data: {
+        labels: ['2019','2020','2021','2022','2023'],
+        datasets: [{
+            label: 'Projects',
+            data: [35, 42, 50, 60, 78],
+            backgroundColor: '#d48a42',
+            borderRadius: 6
+        }]
+    }
+});
+</script>
+
+</body>
+</html>

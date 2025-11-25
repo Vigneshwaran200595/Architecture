@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teams – Architecture Admin Dashboard</title>
+<link rel="stylesheet" href="css/dashboard.css">
+
+<!-- CHART JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+/* PAGE TITLE */
+.page-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+/* TEAM CARDS */
+.team-stats {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.team-card {
+    background: #fff;
+    padding: 25px;
+    border-left: 6px solid #d48a42;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.team-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.team-card h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* GRAPH + TEAM LIST */
+.team-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* TEAM LIST */
+.team-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.team-member {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.team-member:last-child {
+    border-bottom: 0;
+}
+
+.team-member h4 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.team-member span {
+    font-weight: 600;
+    color: #d48a42;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+    .team-stats {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .team-layout {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+      <!-- MOBILE HEADER (Visible only on Mobile) -->
+<div class="mobile-header">
+    
+    <!-- Mobile Logo -->
+    <div class="mobile-logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Mobile Horizontal Sidebar -->
+    <ul class="mobile-menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li class="active">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+        
+    </ul>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo-box">
+        <img src="img/logo.webp" class="logo">
+    </div>
+
+    <ul class="menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li class="active">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <h1>Teams Overview</h1>
+
+        <div class="top-right">
+            <a href="index.html" class="home-btn">Home</a>
+            <img src="img/profile2.webp" class="admin-pic" alt="">
+        </div>
+    </div>
+
+    <!-- PAGE TITLE -->
+    <h2 class="page-title"></h2>
+
+    <!-- TEAM STATS CARDS -->
+    <div class="team-stats">
+        <div class="team-card">
+            <h3>Developers</h3>
+            <h2>12</h2>
+        </div>
+        <div class="team-card">
+            <h3>Designers</h3>
+            <h2>8</h2>
+        </div>
+        <div class="team-card">
+            <h3>Architects</h3>
+            <h2>14</h2>
+        </div>
+        <div class="team-card">
+            <h3>Managers</h3>
+            <h2>5</h2>
+        </div>
+    </div>
+
+    <!-- GRAPH + TEAM LIST -->
+    <div class="team-layout">
+
+        <!-- PIE CHART -->
+        <div class="graph-box">
+            <h3>Team Roles Distribution</h3>
+            <canvas id="teamPieChart"></canvas>
+        </div>
+
+        <!-- TEAM MEMBERS LIST -->
+        <div class="team-box">
+            <h3 style="margin-bottom: 20px;">Team Members</h3>
+
+            <div class="team-member">
+                <h4>Ramesh Kumar</h4><span>Developer</span>
+            </div>
+
+            <div class="team-member">
+                <h4>Priya Sharma</h4><span>Designer</span>
+            </div>
+
+            <div class="team-member">
+                <h4>Ajay Verma</h4><span>Architect</span>
+            </div>
+
+            <div class="team-member">
+                <h4>Divya Prasad</h4><span>Manager</span>
+            </div>
+
+            <div class="team-member">
+                <h4>Suresh N</h4><span>Architect</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PIE CHART SCRIPT -->
+<script>
+const pie = document.getElementById("teamPieChart");
+
+new Chart(pie, {
+    type: "pie",
+    data: {
+        labels: ["Developers", "Designers", "Architects", "Managers"],
+        datasets: [{
+            data: [12, 8, 14, 5],
+            backgroundColor: [
+                "#d48a42",
+                "#434343",
+                "#a56e3f",
+                "#111"
+            ]
+        }]
+    }
+});
+</script>
+
+<script>
+const elements = document.querySelectorAll(".scroll-animate");
+
+function scrollAnimation() {
+    let triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", scrollAnimation);
+scrollAnimation();
+</script>
+
+</body>
+</html>

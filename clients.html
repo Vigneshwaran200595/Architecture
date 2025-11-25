@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture – Clients</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/clients.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+
+    <!-- MOBILE HEADER (Visible only on Mobile) -->
+<div class="mobile-header">
+    
+    <!-- Mobile Logo -->
+    <div class="mobile-logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Mobile Horizontal Sidebar -->
+    <ul class="mobile-menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li class="active">Clients</li>
+    </ul>
+
+</div>
+
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="logo-box">
+        <img src="img/logo.webp" class="logo" alt="">
+    </div>
+
+    <ul class="menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li class="active">Clients</li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <h1>Client</h1>
+
+        <div class="top-right">
+            <a href="index.html" class="home-btn">Home</a>
+            <img src="img/profile2.webp" class="admin-pic" alt="">
+        </div>
+    </div>
+
+    <!-- STATS CARDS -->
+    <div class="cards">
+        <div class="card">
+            <h3>Total Clients</h3>
+            <h2>820</h2>
+        </div>
+
+        <div class="card">
+            <h3>Active Clients</h3>
+            <h2>540</h2>
+        </div>
+
+        <div class="card">
+            <h3>New This Month</h3>
+            <h2>38</h2>
+        </div>
+
+        <div class="card">
+            <h3>Premium Clients</h3>
+            <h2>122</h2>
+        </div>
+    </div>
+
+    <!-- GRAPHS SECTION -->
+    <div class="client-graphs">
+
+        <!-- CLIENT GROWTH GRAPH -->
+        <div class="graph-box">
+            <h3>Client Growth</h3>
+            <canvas id="clientGrowthChart"></canvas>
+        </div>
+
+        <!-- CLIENT CATEGORY PIE -->
+        <div class="graph-box">
+            <h3>Client Category Split</h3>
+            <canvas id="clientCategoryChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- CLIENT TABLE -->
+    <div class="client-table-box">
+        <h3>Recent Clients</h3>
+
+        <table class="client-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Client Name</th>
+                    <th>Type</th>
+                    <th>Project</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>Arun Kumar</td>
+                    <td class="gold">Premium</td>
+                    <td>Luxury Villa</td>
+                </tr>
+                <tr>
+                    <td>#002</td>
+                    <td>Sneha R</td>
+                    <td class="silver">Standard</td>
+                    <td>Modern Apartment</td>
+                </tr>
+                <tr>
+                    <td>#003</td>
+                    <td>David Thomas</td>
+                    <td class="bronze">Basic</td>
+                    <td>Office Interior</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- CHART JS -->
+<script>
+// LINE GRAPH: CLIENT GROWTH
+const c1 = document.getElementById("clientGrowthChart");
+new Chart(c1, {
+    type: "line",
+    data: {
+        labels: ["2019","2020","2021","2022","2023","2024"],
+        datasets: [{
+            label: "Clients",
+            data: [300, 410, 520, 615, 720, 820],
+            borderColor: "#d48a42",
+            backgroundColor: "rgba(212,138,66,0.3)",
+            borderWidth: 3,
+            tension: 0.4,
+            pointRadius: 6,
+            pointBackgroundColor: "#d48a42"
+        }]
+    }
+});
+
+// PIE CHART: CLIENT CATEGORY
+const c2 = document.getElementById("clientCategoryChart");
+new Chart(c2, {
+    type: "pie",
+    data: {
+        labels: ["Premium", "Standard", "Basic"],
+        datasets: [{
+            data: [122, 330, 368],
+            backgroundColor: ["#d48a42", "#1a1c20", "#c9c9c9"]
+        }]
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture – Messages</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/messages.css">
+
+</head>
+
+<body>
+
+  <!-- MOBILE HEADER (Visible only on Mobile) -->
+<div class="mobile-header">
+    
+    <!-- Mobile Logo -->
+    <div class="mobile-logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Mobile Horizontal Sidebar -->
+    <ul class="mobile-menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li class="active">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+        
+    </ul>
+
+</div>
+   
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo-box">
+        <img src="img/logo.webp" class="logo" alt="">
+    </div>
+
+    <ul class="menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li onclick="location.href='projects.html'">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li class="active">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <h1>Messages</h1>
+
+        <div class="top-right">
+            <a href="index.html" class="home-btn">Home</a>
+            <img src="img/profile2.webp" class="admin-pic" alt="">
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="cards">
+        <div class="card"><h3>Total Messages</h3><h2>240</h2></div>
+        <div class="card"><h3>Unread</h3><h2>18</h2></div>
+        <div class="card"><h3>Replied</h3><h2>112</h2></div>
+        <div class="card"><h3>New Today</h3><h2>6</h2></div>
+    </div>
+
+    <!-- MESSAGES LAYOUT -->
+    <div class="messages-container">
+
+        <!-- LEFT MESSAGE LIST -->
+        <div class="message-list">
+            <h3 class="box-title">Inbox</h3>
+
+            <div 
+                class="message-item active"
+                data-name="Arun Kumar"
+                data-email="arun@example.com"
+                data-message="Hi team, I need assistance regarding the interior design work for my new villa located in Chennai. Please let me know the available packages and budget options."
+            >
+                <h4>Arun Kumar</h4>
+                <p>Need help with interior design…</p>
+                <span class="msg-time">10:45 AM</span>
+            </div>
+
+            <div 
+                class="message-item"
+                data-name="Riya Sharma"
+                data-email="riya@gmail.com"
+                data-message="Hello, I would like to receive a quotation for the new apartment renovation project."
+            >
+                <h4>Riya Sharma</h4>
+                <p>Requesting project quotation…</p>
+                <span class="msg-time">Yesterday</span>
+            </div>
+
+            <div 
+                class="message-item"
+                data-name="Meena"
+                data-email="meena@gmail.com"
+                data-message="Please send the blueprint copy for approval. Waiting for your update."
+            >
+                <h4>Meena</h4>
+                <p>Please share the blueprint…</p>
+                <span class="msg-time">2 days ago</span>
+            </div>
+
+            <div 
+                class="message-item"
+                data-name="Daniel"
+                data-email="daniel@gmail.com"
+                data-message="Please update the meeting schedule and confirm your availability tomorrow."
+            >
+                <h4>Daniel</h4>
+                <p>Meeting schedule update…</p>
+                <span class="msg-time">3 days ago</span>
+            </div>
+
+        </div>
+
+        <!-- RIGHT MESSAGE PREVIEW -->
+        <div class="message-view">
+            <h2 class="msg-name">Arun Kumar</h2>
+            <p class="msg-email">arun@example.com</p>
+
+            <div class="msg-full">
+                Hi team,  
+                I need assistance regarding the interior design work for my new villa located in Chennai.  
+                Please let me know the available packages and budget options.
+            </div>
+
+            <textarea class="reply-box" placeholder="Type your reply..."></textarea>
+            <p id="error-msg" style="color:red; margin-top:10px; display:none;"></p>
+
+            <button class="reply-btn">Send Reply</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JS FOR MESSAGE CLICK + REPLY VALIDATION -->
+<script>
+    // Select all items
+const items = document.querySelectorAll(".message-item");
+const msgName = document.querySelector(".msg-name");
+const msgEmail = document.querySelector(".msg-email");
+const msgFull = document.querySelector(".msg-full");
+const replyBox = document.querySelector(".reply-box");
+const replyBtn = document.querySelector(".reply-btn");
+const errorMsg = document.getElementById("error-msg");
+
+// Load message on click
+items.forEach(item => {
+    item.addEventListener("click", () => {
+
+        // Remove active from all
+        items.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+
+        // Set right panel content
+        msgName.textContent = item.dataset.name;
+        msgEmail.textContent = item.dataset.email;
+        msgFull.textContent = item.dataset.message;
+    });
+});
+
+// Reply button click
+replyBtn.addEventListener("click", () => {
+    if (replyBox.value.trim() === "") {
+        errorMsg.style.display = "block";
+        errorMsg.textContent = "Please fill the reply field.";
+
+        setTimeout(() => {
+            errorMsg.style.display = "none";
+        }, 2000);
+
+        return;
+    }
+
+    // Redirect when filled
+    window.location.href = "404.html";
+});
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture – Projects</title>
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/projects.css">
+
+<!-- CHART JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+
+      <!-- MOBILE HEADER (Visible only on Mobile) -->
+<div class="mobile-header">
+    
+    <!-- Mobile Logo -->
+    <div class="mobile-logo">
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Logo">
+        </a>
+    </div>
+
+    <!-- Mobile Horizontal Sidebar -->
+    <ul class="mobile-menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li class="active">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+        
+    </ul>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div class="logo-box">
+        <img src="img/logo.webp" class="logo" alt="">
+    </div>
+
+    <ul class="menu">
+        <li onclick="location.href='dashboard.html'">Dashboard</li>
+        <li class="active">Projects</li>
+        <li onclick="location.href='teams.html'">Teams</li>
+        <li onclick="location.href='messages.html'">Messages</li>
+        <li onclick="location.href='clients.html'">Clients</li>
+    </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <h1>Projects Overview</h1>
+
+        <div class="top-right">
+            <a href="index.html" class="home-btn">Home</a>
+            <img src="img/profile2.webp" class="admin-pic" alt="">
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="cards">
+        <div class="card">
+            <h3>All Projects</h3>
+            <h2>145</h2>
+        </div>
+
+        <div class="card">
+            <h3>Completed</h3>
+            <h2>98</h2>
+        </div>
+
+        <div class="card">
+            <h3>In Progress</h3>
+            <h2>32</h2>
+        </div>
+
+        <div class="card">
+            <h3>New Requests</h3>
+            <h2>15</h2>
+        </div>
+    </div>
+
+    <!-- GRAPHS SECTION -->
+    <div class="project-graphs">
+
+        <div class="graph-box">
+            <h3>Projects Per Year</h3>
+            <canvas id="projectYearChart"></canvas>
+        </div>
+
+        <div class="graph-box">
+            <h3>Project Category Split</h3>
+            <canvas id="projectPie"></canvas>
+        </div>
+
+    </div>
+
+    <!-- TABLE SECTION -->
+    <div class="project-table-box">
+        <h3>Recent Projects</h3>
+
+        <table class="project-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Project Name</th>
+                    <th>Status</th>
+                    <th>Client</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>#01</td>
+                    <td>Luxury Villa</td>
+                    <td class="complete">Completed</td>
+                    <td>Arun Kumar</td>
+                </tr>
+                <tr>
+                    <td>#02</td>
+                    <td>Modern Apartment</td>
+                    <td class="progress">In Progress</td>
+                    <td>Rahul</td>
+                </tr>
+                <tr>
+                    <td>#03</td>
+                    <td>Office Interior</td>
+                    <td class="pending">Pending</td>
+                    <td>Mary</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<!-- GRAPH JS -->
+<script>
+/* BAR CHART */
+const p1 = document.getElementById("projectYearChart");
+new Chart(p1, {
+    type: "bar",
+    data: {
+        labels: ["2019","2020","2021","2022","2023","2024"],
+        datasets: [{
+            label: "Projects",
+            data: [35,42,50,60,78,90],
+            backgroundColor: "#d48a42",
+            borderRadius: 8
+        }]
+    }
+});
+
+/* PIE CHART */
+const p2 = document.getElementById("projectPie");
+new Chart(p2, {
+    type: "pie",
+    data: {
+        labels: ["Interior","Exterior","Renovation"],
+        datasets: [{
+            data: [55,30,15],
+            backgroundColor: ["#d48a42","#1a1c20","#c9c9c9"]
+        }]
+    }
+});
+</script>
+
+</body>
+</html>

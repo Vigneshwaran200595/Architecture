@@ -1,0 +1,181 @@
+/* Messages Layout */
+.messages-container {
+    display: grid;
+    grid-template-columns: 28% 72%;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* LEFT: MESSAGE LIST */
+.message-list {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    height: 600px;
+    overflow-y: auto;
+}
+
+.message-list h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.message-item {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.message-item:hover {
+    background: #ececec;
+}
+
+.message-item.active {
+    background: #d48a42;
+    color: #fff;
+}
+
+.message-item h4 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.message-item p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.msg-time {
+    font-size: 12px;
+    opacity: 0.6;
+    float: right;
+}
+
+/* RIGHT: MESSAGE VIEW */
+.message-view {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.msg-name {
+    font-size: 28px;
+    color: #d48a42;
+    font-weight: 700;
+}
+
+.msg-email {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.msg-full {
+    background: #fafafa;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.reply-box {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+}
+
+.reply-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #d48a42;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reply-btn:hover {
+    background: #b87332;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+    .messages-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease-out;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FADE IN */
+.fadeIn {
+    transform: none;
+}
+
+/* FADE IN UP */
+.fadeInUp {
+    transform: translateY(30px);
+}
+.fadeInUp.active {
+    transform: translateY(0);
+}
+
+/* FADE IN DOWN */
+.fadeInDown {
+    transform: translateY(-30px);
+}
+.fadeInDown.active {
+    transform: translateY(0);
+}
+
+/* FADE IN TOP LEFT */
+.fadeInTopLeft {
+    transform: translate(-30px,-30px);
+}
+.fadeInTopLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN TOP RIGHT */
+.fadeInTopRight {
+    transform: translate(30px,-30px);
+}
+.fadeInTopRight.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM LEFT */
+.fadeInBottomLeft {
+    transform: translate(-30px,30px);
+}
+.fadeInBottomLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM RIGHT */
+.fadeInBottomRight {
+    transform: translate(30px,30px);
+}
+.fadeInBottomRight.active {
+    transform: translate(0,0);
+}

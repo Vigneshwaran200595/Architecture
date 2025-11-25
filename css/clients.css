@@ -1,0 +1,174 @@
+/* GRAPHS SECTION */
+.client-graphs {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* CLIENT TABLE */
+.client-table-box {
+    margin-top: 50px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.client-table-box h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.client-table th {
+    background: #d48a42;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+.client-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* BADGES */
+.gold { color: #d48a42; font-weight: 700; }
+.silver { color: #888; font-weight: 700; }
+.bronze { color: #b87332; font-weight: 700; }
+
+/* ==========================================
+      📱 MOBILE RESPONSIVE FOR CLIENT PAGE
+========================================== */
+
+/* TABLETS (Below 1024px) */
+@media (max-width: 1024px) {
+    .client-graphs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .client-table-box {
+        padding: 20px;
+    }
+}
+
+/* MOBILE (Below 768px) */
+@media (max-width: 768px) {
+
+    /* GRAPHS → 1 COLUMN STACK */
+    .client-graphs {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    /* TABLE BOX */
+    .client-table-box {
+        padding: 18px;
+        margin-top: 35px;
+    }
+
+    .client-table-box h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* TABLE ADJUSTMENTS */
+    .client-table th,
+    .client-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* SMALL MOBILE (Below 480px) */
+@media (max-width: 480px) {
+
+    .client-table-box {
+        padding: 15px;
+    }
+
+    .client-table-box h3 {
+        font-size: 18px;
+    }
+
+    .client-table th,
+    .client-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    /* Badge sizes */
+    .gold, .silver, .bronze {
+        font-size: 13px;
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease-out;
+}
+
+.scroll-animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FADE IN */
+.fadeIn {
+    transform: none;
+}
+
+/* FADE IN UP */
+.fadeInUp {
+    transform: translateY(30px);
+}
+.fadeInUp.active {
+    transform: translateY(0);
+}
+
+/* FADE IN DOWN */
+.fadeInDown {
+    transform: translateY(-30px);
+}
+.fadeInDown.active {
+    transform: translateY(0);
+}
+
+/* FADE IN TOP LEFT */
+.fadeInTopLeft {
+    transform: translate(-30px,-30px);
+}
+.fadeInTopLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN TOP RIGHT */
+.fadeInTopRight {
+    transform: translate(30px,-30px);
+}
+.fadeInTopRight.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM LEFT */
+.fadeInBottomLeft {
+    transform: translate(-30px,30px);
+}
+.fadeInBottomLeft.active {
+    transform: translate(0,0);
+}
+
+/* FADE IN BOTTOM RIGHT */
+.fadeInBottomRight {
+    transform: translate(30px,30px);
+}
+.fadeInBottomRight.active {
+    transform: translate(0,0);
+}

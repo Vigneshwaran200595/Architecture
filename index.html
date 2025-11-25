@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Stackly Architecture</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+
+        <style>
+.dots-loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+
+#spinner.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#spinner.hide {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.dots span {
+  width: 14px;
+  height: 14px;
+  margin: 0 6px;
+  background: #ffb100;
+  border-radius: 50%;
+  display: inline-block;
+  animation: dotBounce 0.6s infinite alternate;
+}
+
+.dots span:nth-child(2) { animation-delay: 0.2s; }
+.dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dotBounce {
+  0% { transform: translateY(0); opacity: .4; }
+  100% { transform: translateY(-12px); opacity: 1; }
+}
+
+
+</style>
+
+    </head>
+
+    
+    <body>
+
+       <div id="spinner" class="dots-loader-wrapper show">
+  <div class="dots">
+    <span></span><span></span><span></span>
+  </div>
+</div>
+
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar d-none d-xl-block w-100">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                  <div class="d-flex flex-wrap">
+    <span class="text-muted me-4">
+        <i class="fas fa-map-marker-alt text-secondary me-2"></i>
+        Salem, Tamilnadu
+    </span>
+
+    <span class="text-muted me-4">
+        <i class="fas fa-phone-alt text-secondary me-2"></i>
+        +01234567890
+    </span>
+
+    <span class="text-muted me-0">
+        <i class="fas fa-envelope text-secondary me-2"></i>
+        Example@gmail.com
+    </span>
+</div>
+
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="text-muted me-3">
+            <i class="fas fa-clock text-secondary me-2"></i>
+            Mon - Sat 8:00 - 17:30, Sunday - CLOSED
+        </span>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
+</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+<div class="nav-item custom-home dropdown">
+    <a href="index.html" class="home-link">Home</a>
+    <span class="arrow-toggle"></span>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="saas.html">Home 2</a>
+    </div>
+</div>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
+                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
+                        <a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+<section class="hero-slider">
+
+    <div class="slides-wrapper">
+
+        <!-- Slide 01 -->
+        <div class="slide active">
+            <div class="left-panel">
+                <div class="badge">01</div>
+                <h3 class="small-title">DELUXE</h3>
+                <h1 class="big-title">KITCHEN</h1>
+                <p class="desc">Right design and right ideas matter a lot of in interior design business.</p>
+                <a href="404.html" class="read-btn">READ MORE</a>
+            </div>
+
+            <div class="right-panel">
+                <img src="img/hero1.webp" />
+            </div>
+        </div>
+
+        <!-- Slide 02 -->
+        <div class="slide">
+            <div class="left-panel">
+                <div class="badge">02</div>
+                <h3 class="small-title">ELEGENT</h3>
+                <h1 class="big-title">BRICK HOUSE</h1>
+                <p class="desc">Interior designing is the art and science which enhance your mind.</p>
+                <a href="404.html" class="read-btn">READ MORE</a>
+            </div>
+
+            <div class="right-panel">
+                <img src="img/hero2.webp" />
+            </div>
+        </div>
+
+        <!-- Slide 03 -->
+        <div class="slide">
+            <div class="left-panel">
+                <div class="badge">03</div>
+                <h3 class="small-title">CREATIVE</h3>
+                <h1 class="big-title">THINKINGS</h1>
+                <p class="desc">A multitask profession which creates any land in beautiful creation.</p>
+                <a href="404.html" class="read-btn">READ MORE</a>
+            </div>
+
+            <div class="right-panel">
+                <img src="img/hero3.webp" />
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <div class="reveal-bar"></div>
+
+       <div class="social-bar">
+    <a href="404.html" target="_blank">LINKEDIN</a>
+    <a href="404.html" target="_blank">TWITTER</a>
+    <a href="404.html" target="_blank">FACEBOOK</a>
+</div>
+
+        <div class="slider-controls">
+            <button id="prevBtn">‹</button>
+            <button id="nextBtn">›</button>
+        </div>
+    </div>
+</section>
+
+<!-- Carousel End -->
+
+        <!-- About Start -->
+        <section class="about-section">
+    <div class="title-box">
+        <h2 class="about-header scroll-animate fadeInTopLeft">About us —</h2>
+    </div>
+
+    <div class="about-wrapper">
+
+        <!-- LEFT CONTENT BOX -->
+        <div class="about-content scroll-animate fadeInTopLeft">
+            <div class="content-inner">
+                <h3>We are competitive in<br>architecture solutions</h3>
+
+                <p>
+                    Landscape design is a process of developing practical and pleasing outdoor 
+                    living space. There are six principles of design that have been used by 
+                    artists for centuries throughout all art forms, painting and floral design.
+                </p>
+
+                <a href="404.html" class="read-btn">READ MORE</a>
+            </div>
+        </div>
+
+        <!-- IMAGE SLIDER -->
+        <div class="about-slider scroll-animate fadeInTopRight">
+
+    <div class="aboutslide"><img src="img/slide1.webp"></div>
+    <div class="aboutslide"><img src="img/slide2.webp"></div>
+    <div class="aboutslide"><img src="img/slide3.webp"></div>
+
+    <!-- Navigation arrows -->
+    <a class="prev" onclick="plusAboutSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusAboutSlides(1)">&#10095;</a>
+
+    <!-- Slide Number -->
+    <div class="about-counter">
+        <span id="aboutSlideNum">1</span> / <span>3</span>
+    </div>
+</div>
+
+</section>
+
+        <!-- About End -->
+
+        <!-- Features Start -->
+<section class="whatwedo-section">
+
+    <!-- TITLE -->
+    <div class="title-box">
+        <h2 class="about-header scroll-animate fadeInTopLeft">What We Do —</h2>
+    </div>
+
+    <div class="whatwedo-container">
+
+        <!-- LEFT SIDE CONTENT -->
+        <div class="left-content">
+
+            <div class="services-row">
+
+                <!-- BOX 1 -->
+                <div class="service-box1 scroll-animate fadeInTopLeft">
+                    <img src="img/step1.webp" alt="">
+                    <h4>Interior Design</h4>
+                    <div class="line"></div>
+                    <div class="number">01</div>
+                </div>
+
+                <!-- BOX 2 -->
+                <div class="service-box1 scroll-animate fadeInTopLeft">
+                    <img src="img/step2.webp" alt="">
+                    <h4>Architectur</h4>
+                    <div class="line"></div>
+                    <div class="number">02</div>
+                </div>
+
+                <!-- BOX 3 -->
+                <div class="service-box1 scroll-animate fadeInTopLeft">
+                    <img src="img/step3.webp" alt="">
+                    <h4>Floor Plan</h4>
+                    <div class="line"></div>
+                    <div class="number">03</div>
+                </div>
+
+            </div>
+
+            <!-- BELOW TEXT BOX -->
+            <div class="details-box scroll-animate fadeInTopLeft">
+                <h3>We present the idea with impressive details.</h3>
+                <p>
+                    Vivid colors and abstract patterns, combined with unique uses of light, textures, 
+                    and space, create an outdoor space that magnifies...
+                </p>
+                <a href="404.html" class="read-more">READ MORE</a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE STATIC SCROLLING IMAGE -->
+        <div class="right-scroll-image scroll-animate fadeInTopRight">
+            <img src="img/Move.webp" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- Features End -->
+
+
+<section class="info-testimonial-section">
+
+    <!-- LEFT SIDE – INFOGRAPHIC -->
+    <div class="infographic-area">
+
+        <h2 class="info-title scroll-animate fadeInTopLeft">Infographic <span>–</span></h2>
+
+        <div class="info-grid">
+
+            <!-- Box 1 -->
+            <div class="info-box scroll-animate fadeInTopLeft">
+                <h3 class="info-number">24</h3>
+                <p class="info-text">Years of Experience</p>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="info-box scroll-animate fadeInTopLeft">
+                <h3 class="info-number">340</h3>
+                <p class="info-text">Project Taken</p>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="info-box scroll-animate fadeInTopLeft">
+                <h3 class="info-number">86</h3>
+                <p class="info-text">Awards Won</p>
+            </div>
+
+            <!-- Box 4 -->
+            <div class="info-box scroll-animate fadeInTopLeft">
+                <h3 class="info-number">36K</h3>
+                <p class="info-text">Twitter Followers</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ---------------- RIGHT SIDE : TESTIMONIAL ---------------- -->
+    <div class="testimonial-area">
+
+    <h2 class="test-title scroll-animate fadeInTopRight">Testimonial <span>–</span></h2>
+
+    <!-- SLIDES -->
+    <div class="testimonial-container scroll-animate fadeInTopRight">
+
+        <!-- Slide 1 -->
+        <div class="testimonial-slide">
+            <div class="test-header">
+                <img src="img/profile1.webp" class="test-img">
+                <div>
+                    <h3 class="test-name">Mitchal Jhon</h3>
+                    <p class="test-role">Architect</p>
+                </div>
+                <span class="test-quote">❝</span>
+            </div>
+
+            <p class="test-msg">
+                “Amazing fast and reliable customer support! The team of developers are willing to go mile
+                for customer service! Thanks! Bliss of souls like mine.”
+            </p>
+
+            <div class="test-count">1 / 3</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+            <div class="test-header">
+                <img src="img/profile2.webp" class="test-img">
+                <div>
+                    <h3 class="test-name">Daniel Smith</h3>
+                    <p class="test-role">Interior Designer</p>
+                </div>
+                <span class="test-quote">❝</span>
+            </div>
+
+            <p class="test-msg">
+                “Brilliant support and elegant design! Their detail-oriented approach helped us build
+                a stunning interior concept effortlessly.”
+            </p>
+
+            <div class="test-count">2 / 3</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+            <div class="test-header">
+                <img src="img/profile3.webp" class="test-img">
+                <div>
+                    <h3 class="test-name">Laura Bennet</h3>
+                    <p class="test-role">Project Manager</p>
+                </div>
+                <span class="test-quote">❝</span>
+            </div>
+
+            <p class="test-msg">
+                “A seamless experience from start to finish! Their creative ideas and commitment to
+                quality exceeded expectations.”
+            </p>
+
+            <div class="test-count">3 / 3</div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<section class="services-section">
+    <h2 class="services-title scroll-animate fadeInTopLeft">All Services —</h2>
+
+    <div class="services-grid">
+
+        <!-- SERVICE BOX 01 -->
+        <div class="service-box scroll-animate fadeInTopLeft">
+            <div class="service-top">
+                <img src="img/service1.webp" class="service-icon" alt="">
+                <span class="service-num">01</span>
+            </div>
+            <h3 class="service-head">Plans and Projects</h3>
+            <p class="service-text">
+                We provide a range of architectural 3D modelling services to assist 
+                with design, planning and development...
+            </p>
+            <a href="404.html" class="read-more">READ MORE</a>
+        </div>
+
+        <!-- SERVICE BOX 02 -->
+        <div class="service-box scroll-animate fadeInTopLeft">
+            <div class="service-top">
+                <img src="img/service2.webp" class="service-icon" alt="">
+                <span class="service-num">02</span>
+            </div>
+            <h3 class="service-head">Interior</h3>
+            <p class="service-text">
+                Analysis and planning services that help clients and architects 
+                work out the forthcoming project...
+            </p>
+            <a href="404.html" class="read-more">READ MORE</a>
+        </div>
+
+        <!-- SERVICE BOX 03 -->
+        <div class="service-box scroll-animate fadeInTopLeft">
+            <div class="service-top">
+                <img src="img/service3.webp" class="service-icon" alt="">
+                <span class="service-num">03</span>
+            </div>
+            <h3 class="service-head">Exterior</h3>
+            <p class="service-text">
+                We offer comprehensive architectural engineering services including 
+                interior design, master planning...
+            </p>
+            <a href="404.html" class="read-more">READ MORE</a>
+        </div>
+
+        <!-- SERVICE BOX 04 -->
+        <div class="service-box scroll-animate fadeInTopLeft">
+            <div class="service-top">
+                <img src="img/service4.webp" class="service-icon" alt="">
+                <span class="service-num">04</span>
+            </div>
+            <h3 class="service-head">Architecture</h3>
+            <p class="service-text">
+                Project management is the process by which our team plans and executes 
+                your project...
+            </p>
+            <a href="404.html" class="read-more">READ MORE</a>
+        </div>
+
+        <!-- SERVICE BOX 05 -->
+        <div class="service-box scroll-animate fadeInTopLeft">
+            <div class="service-top">
+                <img src="img/service5.webp" class="service-icon" alt="">
+                <span class="service-num">05</span>
+            </div>
+            <h3 class="service-head">Furniture</h3>
+            <p class="service-text">
+                We provide architectural consultations & solutions for your interior needs...
+            </p>
+            <a href="404.html" class="read-more">READ MORE</a>
+        </div>
+
+        <!-- SERVICE BOX 06 -->
+        <div class="service-box scroll-animate fadeInTopLeft">
+            <div class="service-top">
+                <img src="img/service6.webp" class="service-icon" alt="">
+                <span class="service-num">06</span>
+            </div>
+            <h3 class="service-head">Decoration</h3>
+            <p class="service-text">
+                We combine interior & exterior design services to provide complete solutions...
+            </p>
+            <a href="404.html" class="read-more">READ MORE</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="projects-section">
+
+    <div class="projects-header scroll-animate fadeInTopBottom">
+        <span class="line"></span>
+        <h2>All Projects</h2>
+        <span class="line"></span>
+    </div>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 01 -->
+        <div class="project-card scroll-animate fadeInTopLeft">
+            <img src="img/p1.webp" alt="">
+            <div class="overlay">
+                <div class="expand-icon">⤢</div>
+                <h3>Interior Design</h3>
+                <p>Muscat, Sultanate of Oman</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 02 -->
+        <div class="project-card scroll-animate fadeInTopLeft">
+            <img src="img/p2.webp" alt="">
+            <div class="overlay">
+                <div class="expand-icon">⤢</div>
+                <h3>Chair Furniture</h3>
+                <p>Muscat, Sultanate of Oman</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 03 -->
+        <div class="project-card scroll-animate fadeInTopLeft">
+            <img src="img/p3.webp" alt="">
+            <div class="overlay">
+                <div class="expand-icon">⤢</div>
+                <h3>Exterior</h3>
+                <p>Muscat, Sultanate of Oman</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 04 -->
+        <div class="project-card scroll-animate fadeInTopLeft">
+            <img src="img/p4.webp" alt="">
+            <div class="overlay">
+                <div class="expand-icon">⤢</div>
+                <h3>Modern Living</h3>
+                <p>Muscat, Sultanate of Oman</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 05 -->
+        <div class="project-card scroll-animate fadeInTopLeft">
+            <img src="img/p5.webp" alt="">
+            <div class="overlay">
+                <div class="expand-icon">⤢</div>
+                <h3>Luxury Bathroom</h3>
+                <p>Muscat, Sultanate of Oman</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+       
+<section class="clients-section">
+
+    <div class="clients-header scroll-animate fadeInTopLeft">
+        <h2>Our Clients —</h2>
+    </div>
+
+    <div class="clients-grid">
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c1.webp" alt="">
+        </div>
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c2.webp" alt="">
+        </div>
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c3.webp" alt="">
+        </div>
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c4.webp" alt="">
+        </div>
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c5.webp" alt="">
+        </div>
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c6.webp" alt="">
+        </div>
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c7.webp" alt="">
+        </div>
+
+        <div class="client-box scroll-animate fadeInTopLeft">
+            <img src="img/c8.webp" alt="">
+        </div>
+
+    </div>
+
+    <div class="clients-vertical">CLIENTS</div>
+
+</section>
+
+<section class="team-section">
+    <div class="title-box">
+        <h2 class="about-header scroll-animate fadeInTopLeft">Our Team —</h2>
+    </div>
+
+    <div class="team-container">
+
+        <!-- TEAM CARD -->
+        <div class="team-card scroll-animate fadeInTopLeft">
+            <div class="team-img">
+                <img src="img/team1.webp" alt="">
+                <div class="team-overlay"></div>
+
+                <div class="team-social">
+                    <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="team-info">
+                <h3>Daniel Rickman</h3>
+                <p>Architect</p>
+            </div>
+        </div>
+
+        <!-- Copy same card 3 more times -->
+        <div class="team-card scroll-animate fadeInTopLeft">
+            <div class="team-img">
+                <img src="img/team2.webp" alt="">
+                <div class="team-overlay"></div>
+                <div class="team-social">
+                    <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>Mark Norwich</h3>
+                <p>Architect</p>
+            </div>
+        </div>
+
+        <div class="team-card scroll-animate fadeInTopLeft">
+            <div class="team-img">
+                <img src="img/team3.webp" alt="">
+                <div class="team-overlay"></div>
+                <div class="team-social">
+                    <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404.html"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html"><i class="fab fa-instagram"></i></a>
+                    <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="team-info">
+                <h3>Nich Jonas</h3>
+                <p>Architect</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="footer-section">
+    <div class="footer-container">
+
+        <!-- Left Logo & Text -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <img src="img/logo2.webp" class="footer-logo" alt="">
+            <p class="footer-text">
+                Crafted specifically for architecture and interior design studios, our template helps you showcase ideas with clarity and elegance.
+            </p>
+
+            <div class="footer-social scroll-animate fadeInTopLeft">
+                <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Recent Post -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <h3 class="footer-title">Recent Post</h3>
+
+            <div class="post-item">
+                <div class="post-date">
+                    15 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    On these beams, we’re.
+                    <div class="post-meta">By Admin – 28</div>
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-date">
+                    17 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    We’ll be a sensation for
+                    <div class="post-meta">By Admin – 29</div>
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-date">
+                    18 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    We’ll be a sensation for
+                    <div class="post-meta">By Admin – 29</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Useful Links -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <h3 class="footer-title">Quick links</h3>
+
+            <ul class="footer-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col scroll-animate fadeInTopLeft">
+            <h3 class="footer-title">Contact Us</h3>
+
+            <p class="contact-text">
+                Salem, Tamilnadu, India.
+            </p>
+
+            <p class="contact-text">support@domain.com</p>
+
+            <p class="contact-text">+91 1234567890</p>
+
+            <p class="contact-text">+91 0987654321</p>
+        </div>
+    </div>
+
+    <!-- Newsletter Row -->
+    <div class="newsletter-row scroll-animate fadeInTopLeft">
+        <div class="newsletter-left">
+            <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
+            <p>Never Miss Anything From Stackly By Signing Up To Our Newsletter.</p>
+        </div>
+
+   <div class="newsletter-box">
+    <input type="email" id="newsletterEmail" placeholder="ENTER YOUR EMAIL">
+    <button onclick="subscribeNewsletter()">✈</button>
+</div>
+    </div>
+
+    <div class="footer-bottom scroll-animate fadeInTopLeft">
+        © 2025 Your Company. Designed By Stackly.
+    </div>
+
+</footer>
+
+
+<script>
+function subscribeNewsletter() {
+
+    const emailInput = document.getElementById("newsletterEmail");
+    const email = emailInput.value.trim();
+
+    function clearError() {
+        emailInput.classList.remove("error");
+        emailInput.placeholder = "ENTER YOUR EMAIL";
+    }
+
+    // Reset before validation
+    clearError();
+
+    // Empty field check
+    if (email === "") {
+        emailInput.classList.add("error");
+        emailInput.value = "";
+        emailInput.placeholder = "Please fill the email field";
+
+        setTimeout(clearError, 2000);
+        return;
+    }
+
+    // Email regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Invalid email check
+    if (!emailPattern.test(email)) {
+        emailInput.classList.add("error");
+        emailInput.value = "";
+        emailInput.placeholder = "Enter a valid email address";
+
+        setTimeout(clearError, 2000);
+        return;
+    }
+
+    // Valid email → redirect
+    window.location.href = "404.html";
+}
+</script>
+
+
+<script>
+let aboutIndex = 1;
+let autoSlideTimer;
+
+// INITIAL LOAD
+showAboutSlides(aboutIndex);
+startAutoSlide();
+
+// Manual navigation
+function plusAboutSlides(n) {
+    showAboutSlides(aboutIndex += n);
+    resetAutoSlide();   // restart timer when user clicks
+}
+
+function startAutoSlide() {
+    autoSlideTimer = setInterval(() => {
+        aboutIndex++;
+        showAboutSlides(aboutIndex);
+    }, 4000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlideTimer);
+    startAutoSlide();
+}
+
+function showAboutSlides(n) {
+    let slides = document.getElementsByClassName("aboutslide");
+
+    if (n > slides.length) { aboutIndex = 1 }
+    if (n < 1) { aboutIndex = slides.length }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[aboutIndex - 1].style.display = "block";
+
+    document.getElementById("aboutSlideNum").innerText = aboutIndex;
+}
+</script>
+
+
+        <script>
+window.addEventListener("load", function () {
+    setTimeout(() => {
+        const sp = document.getElementById("spinner");
+        sp.classList.remove("show");
+        sp.classList.add("hide");
+    }, 600);
+});
+
+
+</script>
+
+<script>
+let testiIndex = 0;
+autoTestimonial();
+
+function autoTestimonial() {
+    let slides = document.getElementsByClassName("testimonial-slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    testiIndex++;
+
+    if (testiIndex > slides.length) { testiIndex = 1; }
+
+    slides[testiIndex - 1].style.display = "block";
+
+    setTimeout(autoTestimonial, 4000);
+}
+</script>
+
+
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+const reveal = document.querySelector(".reveal-bar");
+const SPEED = 1000;  // animation speed
+
+// Auto-slide function
+function nextAuto() {
+    index = (index + 1) % slides.length;
+    activateSlide(index);
+}
+
+// Start autoplay
+let autoSlide = setInterval(nextAuto, 5000);
+
+// Restart timer holder
+let restartTimer;
+
+// Main activate slide function
+function activateSlide(n) {
+    reveal.style.width = "100%";
+
+    setTimeout(() => {
+        slides.forEach(s => s.classList.remove("active"));
+        slides[n].classList.add("active");
+        reveal.style.width = "0%";
+    }, SPEED);
+}
+
+// Manual next
+document.getElementById("nextBtn").onclick = () => {
+    manualSlide((index + 1) % slides.length);
+};
+
+// Manual prev
+document.getElementById("prevBtn").onclick = () => {
+    manualSlide((index - 1 + slides.length) % slides.length);
+};
+
+// Function that handles manual click
+function manualSlide(newIndex) {
+    clearInterval(autoSlide);     // stop autoplay immediately
+    clearTimeout(restartTimer);   // clear previous restart timer
+
+    index = newIndex;
+    activateSlide(index);
+
+    // Restart autoplay after 6 seconds of inactivity
+    restartTimer = setTimeout(() => {
+        autoSlide = setInterval(nextAuto, 3000);
+    }, 6000);
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const arrow = document.querySelector(".custom-home .arrow-toggle");
+    const menu = document.querySelector(".custom-home .dropdown-menu");
+    const homeLink = document.querySelector(".custom-home .home-link");
+
+    if (window.innerWidth < 992) {
+
+        // FIX: Prevent arrow click from triggering Home link
+        arrow.addEventListener("click", function(e){
+            e.preventDefault();      // stop navigation
+            e.stopPropagation();     // stop bubbling to <a>
+            menu.classList.toggle("show");
+        });
+
+        // Ensure clicking Home still goes to index.html
+        homeLink.addEventListener("click", function(e){
+            menu.classList.remove("show");
+        });
+    }
+});
+</script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    <script>
+const elements = document.querySelectorAll(".scroll-animate");
+
+function scrollAnimation() {
+    let triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            el.classList.add("active");
+        } else {
+            el.classList.remove("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", scrollAnimation);
+scrollAnimation();
+</script>
+
+
+    </body>
+
+</html>
