@@ -453,6 +453,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 /* Dark Overlay */
@@ -568,6 +569,7 @@
     justify-content: space-between;
     padding: 60px;
     background: #eef1f3;
+    overflow: hidden;
     font-family: 'Montserrat', sans-serif;
     gap: 40px;
 }
@@ -673,6 +675,7 @@ textarea {
 .map-section {
     padding: 60px 40px;
     background: #f4f4f4;
+    overflow: hidden;
     text-align: center;
     font-family: "Playfair Display", serif;
 }
@@ -1179,4 +1182,9 @@ input.error::placeholder {
 }
 .fadeInBottomRight.active {
     transform: translate(0,0);
+}
+
+
+.container, .row, section, div {
+    overflow-x: hidden;
 }
