@@ -1839,8 +1839,3 @@ input.error::placeholder {
 [data-animate="zoomIn"].animate-active {
     transform: scale(1);
 }
-/* Fix HOME hover text color */
-.navbar-nav .nav-item .home-link:hover,
-.navbar-nav .nav-item .home-link.active {
-    color: #d48a42 !important;
-}

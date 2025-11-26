@@ -14,12 +14,6 @@
     box-shadow: 0 4px 10px rgba(212,138,66,0.4);
 }
 
-/* Fix HOME hover text color */
-.navbar-nav .nav-item .home-link:hover,
-.navbar-nav .nav-item .home-link.active {
-    color: #d48a42 !important;
-}
-
 
 /*** Spinner ***/
 #spinner {
