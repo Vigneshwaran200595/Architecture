@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Stackly Architecture</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/saas.css" rel="stylesheet">
+
+    </head>
+
+    
+    <body>
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar d-none d-xl-block w-100">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+                  <div class="d-flex flex-wrap">
+    <span class="text-muted me-4">
+        <i class="fas fa-map-marker-alt text-secondary me-2"></i>
+        Salem, Tamilnadu
+    </span>
+
+    <span class="text-muted me-4">
+        <i class="fas fa-phone-alt text-secondary me-2"></i>
+        +01234567890
+    </span>
+
+    <span class="text-muted me-0">
+        <i class="fas fa-envelope text-secondary me-2"></i>
+        Example@gmail.com
+    </span>
+</div>
+
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <span class="text-muted me-3">
+            <i class="fas fa-clock text-secondary me-2"></i>
+            Mon - Sat 8:00 - 17:30, Sunday - CLOSED
+        </span>
+                        <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
+</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+<div class="nav-item custom-home dropdown">
+    <a href="saas.html" class="home-link">Home</a>
+    <span class="arrow-toggle"></span>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="index.html">Home 1</a>
+    </div>
+</div>
+                        <a href="about1.html" class="nav-item nav-link">About</a>
+                        <a href="service1.html" class="nav-item nav-link">Services</a>
+                        <a href="projects1.html" class="nav-item nav-link">Projects</a>
+                        <a href="faq.html" class="nav-item nav-link">Faq</a>
+                        <a href="contact1.html" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
+<a href="login1.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
+    Register
+</a>                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- HERO SECTION -->
+<div class="hero">
+
+    <!-- SLIDE IMAGES -->
+    <div class="hero-slide active" style="background-image:url('img1/hero3.webp');"></div>
+
+    <div class="hero-slide" style="background-image:url('img1/hero2.webp');"></div>
+
+    <div class="hero-slide" style="background-image:url('img1/hero1.webp');"></div>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- SLIDE CONTENT (CHANGES WITH JS) -->
+    <div class="hero-content" id="heroText">
+        <h4>GENERAL</h4>
+        <h1>Virtually Build Your House</h1>
+        <p>Experience modern architectural design with innovative virtual building technology.</p>
+    </div>
+
+    <!-- Navigation arrows -->
+    <div class="nav-arrow nav-left" onclick="prevSlide()">&#10094;</div>
+    <div class="nav-arrow nav-right" onclick="nextSlide()">&#10095;</div>
+</div>
+
+
+<section class="counter-section">
+    <div class="counter-container">
+
+        <!-- Box 1 -->
+        <div class="counter-box" data-animate="backInLeft">
+            <div class="counter-icon">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <div class="counter-number" data-target="3453">0</div>
+            <div class="counter-title">SATISFIED CLIENTS</div>
+            <p class="counter-desc">Delivering timeless designs that exceed expectations and inspire lifestyles.</p>
+            
+            <span class="counter-line"></span>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="counter-box" data-animate="backInLeft">
+            <div class="counter-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <div class="counter-number" data-target="4234">0</div>
+            <div class="counter-title">COMPLETED PROJECTS</div>
+            <p class="counter-desc">From concept to creation, we’ve transformed spaces across the globe.</p>
+
+            <span class="counter-line"></span>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="counter-box" data-animate="backInLeft">
+            <div class="counter-icon">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="counter-number" data-target="3123">0</div>
+            <div class="counter-title">AWARDS RECEIVED</div>
+            <p class="counter-desc">Recognized for excellence in architecture and interior design.</p>
+
+            <span class="counter-line"></span>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="counter-box" data-animate="backInLeft">
+            <div class="counter-icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <div class="counter-number" data-target="1831">0</div>
+            <div class="counter-title">SKILLED DESIGNERS</div>
+            <p class="counter-desc">Our multidisciplinary team brings creativity and precision to every detail.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about-section">
+    <div class="about-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="about-image" data-animate="backInLeft">
+            <img src="img1/about.webp" alt="Interior Design">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="about-content" data-animate="backInRight">
+
+            <h4 class="about-subtitle">ABOUT US</h4>
+
+            <h1 class="about-title">
+                25+ Years of<br>
+                Excellence in<br>
+                Architecture & Interior<br>
+                Design
+            </h1>
+
+            <p class="about-text">
+                We are a creative studio specializing in architectural planning and interior styling.
+                With over two decades of experience, we bring ideas to life through timeless design,
+                attention to detail, and a commitment to quality.
+            </p>
+
+            <ul class="about-list">
+                <li><i class="fa-solid fa-circle-check"></i> Innovative architectural solutions</li>
+                <li><i class="fa-solid fa-circle-check"></i> Personalized interior design services</li>
+                <li><i class="fa-solid fa-circle-check"></i> Commitment to quality and sustainability</li>
+            </ul>
+
+            <a href="404_1.html" class="about-btn">Explore More</a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="services-section">
+    <h4 class="service-subtitle" data-animate="backInLeft">OUR SERVICES</h4>
+    <h2 class="service-title" data-animate="backInLeft">Timeless Architecture & Interior Experiences</h2>
+
+    <div class="services-grid">
+
+        <!-- CARD 1 -->
+        <div class="service-card" data-animate="backInLeft">
+            <div class="service-image">
+                <img src="img1/service1.webp">
+            </div>
+            <div class="service-content">
+                <div class="icon-box">
+                    <i class="fa-solid fa-drafting-compass"></i>
+                </div>
+                <h3>Architectural Design</h3>
+                <p>Innovative and functional designs tailored to modern living and urban aesthetics.</p>
+                <a href="404_1.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="service-card" data-animate="backInLeft">
+            <div class="service-image">
+                <img src="img1/service2.webp">
+            </div>
+            <div class="service-content">
+                <div class="icon-box">
+                    <i class="fa-solid fa-couch"></i>
+                </div>
+                <h3>Interior Styling</h3>
+                <p>Creating elegant, personalized spaces that reflect your lifestyle and taste.</p>
+                <a href="404_1.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="service-card" data-animate="backInLeft">
+            <div class="service-image">
+                <img src="img1/service3.webp">
+            </div>
+            <div class="service-content">
+                <div class="icon-box">
+                    <i class="fa-solid fa-border-all"></i>
+                </div>
+                <h3>Space Planning</h3>
+                <p>Maximizing space efficiency with intelligent layout and design strategies.</p>
+                <a href="404_1.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="service-card" data-animate="backInLeft">
+            <div class="service-image">
+                <img src="img1/service4.webp">
+            </div>
+            <div class="service-content">
+                <div class="icon-box">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h3>Color & Material Consulting</h3>
+                <p>Helping you select finishes and palettes that enhance your environment.</p>
+                <a href="404_1.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="service-card" data-animate="backInLeft">
+            <div class="service-image">
+                <img src="img1/service5.webp">
+            </div>
+            <div class="service-content">
+                <div class="icon-box">
+                    <i class="fa-solid fa-city"></i>
+                </div>
+                <h3>Urban Planning</h3>
+                <p>Strategic planning for residential and commercial development projects.</p>
+                <a href="404_1.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="service-card" data-animate="backInLeft">
+            <div class="service-image">
+                <img src="img1/service6.webp">
+            </div>
+            <div class="service-content">
+                <div class="icon-box">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                </div>
+                <h3>Project Supervision</h3>
+                <p>End-to-end management ensuring on-time, on-budget, and quality execution.</p>
+                <a href="404_1.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="why-choose-container">
+    <div class="why-left">
+        <h4 class="why-sub" data-animate="backInLeft">WHY CHOOSE US!</h4>
+
+        <h2 class="why-title" data-animate="backInLeft">
+            Complete Architecture <br>
+            & Interior Design <br>
+            Solutions
+        </h2>
+
+        <p class="why-desc" data-animate="backInLeft">
+            With a legacy of creativity and precision, we design spaces that blend beauty with 
+            purpose. From concept to completion, we focus on delivering timeless elegance, 
+            functional layouts, and personalized interiors tailored to your needs.
+        </p>
+
+        <div class="why-grid">
+            <div class="why-box" data-animate="backInLeft">
+                <div class="why-icon"><i class="fa-solid fa-check"></i></div>
+                <div>
+                    <h5>High-Quality</h5>
+                    <span>DESIGNS</span>
+                </div>
+            </div>
+
+            <div class="why-box" data-animate="backInLeft">
+                <div class="why-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <div>
+                    <h5>Experienced</h5>
+                    <span>PROFESSIONALS</span>
+                </div>
+            </div>
+
+            <div class="why-box" data-animate="backInLeft">
+                <div class="why-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+                <div>
+                    <h5>Personalized</h5>
+                    <span>CONSULTATIONS</span>
+                </div>
+            </div>
+
+            <div class="why-box" data-animate="backInLeft">
+                <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+                <div>
+                    <h5>Responsive</h5>
+                    <span>SUPPORT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-right" data-animate="backInRight">
+        <img src="img1/why.webp" alt="Architecture">
+    </div>
+</section>
+
+<section class="projects-section">
+
+    <h4 class="projects-sub" data-animate="backInLeft">OUR PROJECTS</h4>
+    <h2 class="projects-title" data-animate="backInLeft">Our Latest Architecture & Interior Projects</h2>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card" data-animate="backInLeft">
+            <div class="project-img">
+            <img src="img1/project1.webp" alt="Project">
+
+            <div class="overlay">
+                <a href="404_1.html" class="view-btn">View More</a>
+            </div>
+            </div>  
+            <div class="project-info">
+                <span class="category">Residential</span>
+                <h3 class="project-title">Modern Villa Design With Natural Lighting & Open Spaces</h3>
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card" data-animate="backInLeft">
+             <div class="project-img">
+            <img src="img1/project2.webp" alt="Project">
+
+            <div class="overlay">
+                <a href="404_1.html" class="view-btn">View More</a>
+            </div>
+            </div> 
+            <div class="project-info">
+                <span class="category">Commercial</span>
+                <h3 class="project-title">Contemporary Office Space with Sustainable Architecture</h3>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card" data-animate="backInLeft">
+             <div class="project-img">
+            <img src="img1/project3.webp" alt="Project">
+
+            <div class="overlay">
+                <a href="404_1.html" class="view-btn">View More</a>
+            </div>
+            </div> 
+            <div class="project-info">
+                <span class="category">Interior</span>
+                <h3 class="project-title">Minimalist Living Room with Custom Wood Finishes</h3>
+            </div>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="project-card" data-animate="backInLeft">
+             <div class="project-img">
+            <img src="img1/project4.webp" alt="Project">
+
+            <div class="overlay">
+                <a href="404_1.html" class="view-btn">View More</a>
+            </div>
+            </div> 
+            <div class="project-info">
+                <span class="category">Residential</span>
+                <h3 class="project-title">Elegant Family Home Designed with Smart Layouts</h3>
+            </div>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="project-card" data-animate="backInLeft">
+             <div class="project-img">
+            <img src="img1/project5.webp" alt="Project">
+
+            <div class="overlay">
+                <a href="404_1.html" class="view-btn">View More</a>
+            </div>
+            </div> 
+            <div class="project-info">
+                <span class="category">Commercial</span>
+                <h3 class="project-title">Retail Space Redesign Blending Brand and Ambiance</h3>
+            </div>
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div class="project-card" data-animate="backInLeft">
+             <div class="project-img">
+            <img src="img1/project6.webp" alt="Project">
+
+            <div class="overlay">
+                <a href="404_1.html" class="view-btn">View More</a>
+            </div>
+            </div> 
+            <div class="project-info">
+                <span class="category">Interior</span>
+                <h3 class="project-title">Luxury Kitchen Makeover with Custom Cabinetry</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quote-section">
+
+    <div class="quote-image" data-animate="backInLeft">
+        <img src="img1/quote.webp" alt="">
+    </div>
+
+    <div class="quote-content" data-animate="backInRight">
+        <h4 class="quote-sub">REQUEST A QUOTE</h4>
+        <h2 class="quote-title">Get a Free Consultation</h2>
+
+        <p class="quote-text">
+            Looking to transform your space? Tell us your vision, and our team of architects 
+            and designers will provide a customized quote to bring your ideas to life.  
+            No commitment, just creativity.
+        </p>
+
+        <form class="quote-form" id="quoteForm" onsubmit="return validateForm()">
+
+    <div class="form-row">
+        <div>
+            <input type="text" id="name" placeholder="Your Name">
+            <small class="error" id="nameError"></small>
+        </div>
+
+        <div>
+            <input type="email" id="email" placeholder="Your Email">
+            <small class="error" id="emailError"></small>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div>
+            <input type="text" id="phone" placeholder="Your Phone">
+            <small class="error" id="phoneError"></small>
+        </div>
+
+        <div>
+            <select id="service">
+                <option value="">Select a Service</option>
+                <option value="Architecture">Architecture</option>
+                <option value="Interior">Interior Design</option>
+                <option value="Renovation">Renovation</option>
+            </select>
+            <small class="error" id="serviceError"></small>
+        </div>
+    </div>
+
+    <div>
+        <textarea id="details" placeholder="Your Project Details"></textarea>
+        <small class="error" id="detailsError"></small>
+    </div>
+
+    <button type="submit" class="quote-btn">Request Quote</button>
+</form>
+
+    </div>
+
+</section>
+
+<section class="team-section">
+    <h4 class="team-sub" data-animate="backInLeft">TEAM MEMBER</h4>
+    <h2 class="team-title" data-animate="backInLeft">Experienced Team Members</h2>
+
+    <div class="team-grid">
+
+        <!-- TEAM CARD 1 -->
+        <div class="team-card" data-animate="backInLeft">
+            <div class="team-img-box">
+                <img src="img1/team1.webp" alt="Team Member">
+                <div class="social-icons">
+                    <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404_1.html"><i class="fab fa-x-twitter"></i></a>
+                    <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <h3 class="team-name">OLIVER SMITH</h3>
+            <p class="team-role">Project Architect</p>
+        </div>
+
+        <!-- TEAM CARD 2 -->
+        <div class="team-card" data-animate="backInLeft">
+            <div class="team-img-box">
+                <img src="img1/team2.webp" alt="Team Member">
+                <div class="social-icons">
+                    <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404_1.html"><i class="fab fa-x-twitter"></i></a>
+                    <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <h3 class="team-name">AMELIA TURNER</h3>
+            <p class="team-role">Interior Designer</p>
+        </div>
+
+        <!-- TEAM CARD 3 -->
+        <div class="team-card" data-animate="backInLeft">
+            <div class="team-img-box">
+                <img src="img1/team3.webp" alt="Team Member">
+                <div class="social-icons">
+                    <a href="404_1.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="404_1.html"><i class="fab fa-x-twitter"></i></a>
+                    <a href="404_1.html"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <h3 class="team-name">JAMES BENNETT</h3>
+            <p class="team-role">Creative Director</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="testimonial-section">
+
+    <h4 class="test-sub" data-animate="backInLeft">TESTIMONIAL</h4>
+    <h2 class="test-title" data-animate="backInLeft">What Our Clients Say!</h2>
+
+    <div class="testimonial-container" data-animate="backInLeft">
+
+        <span class="arrow left" onclick="prevSlide()">&#8592;</span>
+
+        <div class="testimonial-slide fade">
+            <img src="img/profile1.webp" class="client-img">
+            <div class="quote-icon">❝</div>
+            <p class="client-text">
+                “Their attention to detail and understanding of our brand made our office redesign an outstanding success.”
+            </p>
+            <h3 class="client-name">DAVID CHEN</h3>
+            <p class="client-role">CEO, CreativSpace</p>
+        </div>
+
+        <div class="testimonial-slide fade">
+            <img src="img/profile2.webp" class="client-img">
+            <div class="quote-icon">❝</div>
+            <p class="client-text">
+                “Exceptional service from start to finish. Their team truly brought our dream interior to life.”
+            </p>
+            <h3 class="client-name">AMIRA YUSUF</h3>
+            <p class="client-role">Interior Blogger</p>
+        </div>
+
+        <div class="testimonial-slide fade">
+            <img src="img/profile3.webp" class="client-img">
+            <div class="quote-icon">❝</div>
+            <p class="client-text">
+                “Working with ArchNest Studio was a dream. They transformed our living space into something out of a magazine!”
+            </p>
+            <h3 class="client-name">SARAH WILLIAMS</h3>
+            <p class="client-role">Homeowner</p>
+        </div>
+
+        <span class="arrow right" onclick="nextSlide()">&#8594;</span>
+
+    </div>
+
+</section>
+
+
+<footer class="footer-section">
+    <div class="footer-container">
+
+        <!-- Left Logo & Text -->
+        <div class="footer-col" data-animate="backInLeft">
+            <img src="img/logo2.webp" class="footer-logo" alt="">
+            <p class="footer-text">
+                Crafted specifically for architecture and interior design studios, our template helps you showcase ideas with clarity and elegance.
+            </p>
+
+            <div class="footer-social" data-animate="backInLeft">
+                <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <!-- Recent Post -->
+        <div class="footer-col" data-animate="backInLeft">
+            <h3 class="footer-title">Recent Post</h3>
+
+            <div class="post-item">
+                <div class="post-date">
+                    15 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    On these beams, we’re.
+                    <div class="post-meta">By Admin – 28</div>
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-date">
+                    17 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    We’ll be a sensation for
+                    <div class="post-meta">By Admin – 29</div>
+                </div>
+            </div>
+
+            <div class="post-item">
+                <div class="post-date">
+                    18 <span>OCT 2025</span>
+                </div>
+                <div class="post-info">
+                    We’ll be a sensation for
+                    <div class="post-meta">By Admin – 29</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Useful Links -->
+        <div class="footer-col" data-animate="backInLeft">
+            <h3 class="footer-title">Quick links</h3>
+
+            <ul class="footer-links">
+                <li><a href="about1.html">About</a></li>
+                <li><a href="service1.html">Services</a></li>
+                <li><a href="projects1.html">Projects</a></li>
+                <li><a href="faq.html">Faq</a></li>
+                <li><a href="contact1.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col" data-animate="backInLeft">
+            <h3 class="footer-title">Contact Us</h3>
+
+            <p class="contact-text">
+                Salem, Tamilnadu, India.
+            </p>
+
+            <p class="contact-text">support@domain.com</p>
+
+            <p class="contact-text">+91 1234567890</p>
+
+            <p class="contact-text">+91 0987654321</p>
+        </div>
+    </div>
+
+    <!-- Newsletter Row -->
+    <div class="newsletter-row" data-animate="backInLeft">
+        <div class="newsletter-left">
+            <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
+            <p>Never Miss Anything From Stackly By Signing Up To Our Newsletter.</p>
+        </div>
+
+   <div class="newsletter-box" data-animate="backInLeft">
+    <input type="email" id="newsletterEmail" placeholder="ENTER YOUR EMAIL">
+    <button onclick="subscribeNewsletter()">✈</button>
+</div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Your Company. Designed By Stackly.
+    </div>
+
+</footer>
+
+
+
+<script>
+function subscribeNewsletter() {
+
+    const emailInput = document.getElementById("newsletterEmail");
+    const email = emailInput.value.trim();
+
+    function clearError() {
+        emailInput.classList.remove("error");
+        emailInput.placeholder = "ENTER YOUR EMAIL";
+    }
+
+    // Reset before validation
+    clearError();
+
+    // Empty field check
+    if (email === "") {
+        emailInput.classList.add("error");
+        emailInput.value = "";
+        emailInput.placeholder = "Please fill the email field";
+
+        setTimeout(clearError, 2000);
+        return;
+    }
+
+    // Email regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Invalid email check
+    if (!emailPattern.test(email)) {
+        emailInput.classList.add("error");
+        emailInput.value = "";
+        emailInput.placeholder = "Enter a valid email address";
+
+        setTimeout(clearError, 2000);
+        return;
+    }
+
+    // Valid email → redirect
+    window.location.href = "404_1.html";
+}
+</script>
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+// AUTO SLIDE
+function showSlides() {
+    let slides = document.getElementsByClassName("testimonial-slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 1000); // change every 4 seconds
+}
+
+// NEXT / PREV BUTTONS
+function nextSlide() {
+    slideIndex++;
+    showManualSlide();
+}
+
+function prevSlide() {
+    slideIndex--;
+    showManualSlide();
+}
+
+function showManualSlide() {
+    let slides = document.getElementsByClassName("testimonial-slide");
+
+    if (slideIndex > slides.length) slideIndex = 1;
+    if (slideIndex < 1) slideIndex = slides.length;
+
+    for (let s of slides) {
+        s.style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}
+</script>
+
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let service = document.getElementById("service").value.trim();
+    let details = document.getElementById("details").value.trim();
+
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let phoneError = document.getElementById("phoneError");
+    let serviceError = document.getElementById("serviceError");
+    let detailsError = document.getElementById("detailsError");
+
+    // Clear errors first
+    nameError.innerHTML = "";
+    emailError.innerHTML = "";
+    phoneError.innerHTML = "";
+    serviceError.innerHTML = "";
+    detailsError.innerHTML = "";
+
+    let isValid = true;
+
+    // Function to auto-clear error messages
+    function clearError(errBox) {
+        setTimeout(() => {
+            errBox.innerHTML = "";
+        }, 2000); // auto hide after 2 seconds
+    }
+
+    // Name validation
+    if (name === "") {
+        nameError.innerHTML = "Please enter your name";
+        clearError(nameError);
+        isValid = false;
+    }
+
+    // Email validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+        emailError.innerHTML = "Please enter your email";
+        clearError(emailError);
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        emailError.innerHTML = "Please enter a valid email";
+        clearError(emailError);
+        isValid = false;
+    }
+
+    // Phone validation (10 digits)
+    let phonePattern = /^[0-9]{10}$/;
+    if (phone === "") {
+        phoneError.innerHTML = "Please enter your phone number";
+        clearError(phoneError);
+        isValid = false;
+    } else if (!phonePattern.test(phone)) {
+        phoneError.innerHTML = "Phone must be 10 digits";
+        clearError(phoneError);
+        isValid = false;
+    }
+
+    // Service validation
+    if (service === "") {
+        serviceError.innerHTML = "Please select a service";
+        clearError(serviceError);
+        isValid = false;
+    }
+
+    // Details validation
+    if (details === "") {
+        detailsError.innerHTML = "Please enter project details";
+        clearError(detailsError);
+        isValid = false;
+    }
+
+    // If everything is valid → redirect
+    if (isValid) {
+        window.location.href = "404_1.html";
+        return false;
+    }
+
+    return false;
+}
+</script>
+
+
+<script>
+// Counter Animation
+const counters = document.querySelectorAll(".counter-number");
+
+counters.forEach(counter => {
+    const animate = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+
+        const speed = 50; // lower = faster
+        const increment = target / 120;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(animate, speed);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    animate();
+});
+</script>
+
+<script>
+/* SLIDE IMAGES */
+let slides = document.querySelectorAll(".hero-slide");
+let index = 0;
+
+/* SLIDE TEXT CONTENT */
+const slideContent = [
+    {
+        title: "GENERAL",
+        heading: "Virtually Build Your House",
+        desc: "Experience modern architectural design with innovative virtual building technology."
+    },
+    {
+        title: "ARCHITECTURE",
+        heading: "We Design Modern Buildings",
+        desc: "Premium architecture solutions for residential & commercial spaces."
+    },
+    {
+        title: "INTERIOR",
+        heading: "Make Your Interior Stunning",
+        desc: "Creative interior designs crafted with perfection and elegance."
+    }
+];
+
+function updateText(i) {
+    const t = slideContent[i];
+    document.getElementById("heroText").innerHTML = `
+        <h4>${t.title}</h4>
+        <h1>${t.heading}</h1>
+        <p>${t.desc}</p>
+    `;
+}
+
+function showSlide(i) {
+    slides.forEach(s => s.classList.remove("active"));
+    slides[i].classList.add("active");
+    updateText(i);
+}
+
+function nextSlide() {
+    index++;
+    if (index >= slides.length) index = 0;
+    showSlide(index);
+}
+
+function prevSlide() {
+    index--;
+    if (index < 0) index = slides.length - 1;
+    showSlide(index);
+}
+
+/* Auto Slide Every 5 Seconds */
+setInterval(nextSlide, 5000);
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const arrow = document.querySelector(".custom-home .arrow-toggle");
+    const menu = document.querySelector(".custom-home .dropdown-menu");
+    const homeLink = document.querySelector(".custom-home .home-link");
+
+    if (window.innerWidth < 992) {
+
+        // FIX: Prevent arrow click from triggering Home link
+        arrow.addEventListener("click", function(e){
+            e.preventDefault();      // stop navigation
+            e.stopPropagation();     // stop bubbling to <a>
+            menu.classList.toggle("show");
+        });
+
+        // Ensure clicking Home still goes to index.html
+        homeLink.addEventListener("click", function(e){
+            menu.classList.remove("show");
+        });
+    }
+});
+</script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+const elements = document.querySelectorAll("[data-animate]");
+
+function scrollAnimation() {
+    let triggerBottom = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            el.classList.add("animate-active");
+        } else {
+            el.classList.remove("animate-active");
+        }
+    });
+}
+
+window.addEventListener("scroll", scrollAnimation);
+scrollAnimation();
+</script>
+
+
+
+    </body>
+
+</html>

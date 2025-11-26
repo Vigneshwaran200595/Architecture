@@ -343,7 +343,7 @@ button:hover{
 
     <!-- LEFT SIDE -->
     <div class="side-panel scroll-animate fadeInTopLeft">
-        <a href="index.html">
+        <a href="saas.html">
     <img src="img/logo.webp" alt="Logo">
 </a>
 
@@ -353,7 +353,7 @@ button:hover{
 
     <!-- RIGHT SIDE -->
     <div class="forms-box scroll-animate fadeInTopRight">
-        <a class="home-inside" href="index.html">Home</a>
+        <a class="home-inside" href="saas.html">Home</a>
 
         <div class="form-wrapper" id="slider">
 
@@ -469,7 +469,7 @@ function validateForm(fields, errorBox, confirmPass = null){
 loginForm.addEventListener("submit", e=>{
     e.preventDefault();
     if (validateForm([loginEmail, loginPass], loginError)){
-        window.location.href = "404.html";
+        window.location.href = "404_1.html";
     }
 });
 
@@ -477,7 +477,7 @@ loginForm.addEventListener("submit", e=>{
 registerForm.addEventListener("submit", e=>{
     e.preventDefault();
     if (validateForm([regName, regEmail, regPass], regError, regConfirmPass)){
-        window.location.href = "404.html";
+        window.location.href = "404_1.html";
     }
 });
 
@@ -485,7 +485,7 @@ registerForm.addEventListener("submit", e=>{
 forgotForm.addEventListener("submit", e=>{
     e.preventDefault();
     if (validateForm([forgotEmail], forgotError)){
-        window.location.href = "404.html";
+        window.location.href = "404_1.html";
     }
 });
 </script>
