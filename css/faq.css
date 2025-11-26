@@ -577,6 +577,7 @@
 .faq-section {
     padding: 80px;
     background: #ffffff;
+    overflow: hidden;
     font-family: "Playfair Display", serif;
 }
 

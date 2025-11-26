@@ -577,6 +577,7 @@
 .contact-section {
     padding: 60px;
     background: #f4f4f4;
+    overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
