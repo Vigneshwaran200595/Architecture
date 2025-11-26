@@ -1020,6 +1020,11 @@ input.error::placeholder {
         padding-bottom: 18px !important;
     }
 }
+/* Fix HOME hover text color */
+.navbar-nav .nav-item .home-link:hover,
+.navbar-nav .nav-item .home-link.active {
+    color: #d48a42 !important;
+}
 
 /* FIXED REGISTER BUTTON HOVER */
 .register-btn:hover {

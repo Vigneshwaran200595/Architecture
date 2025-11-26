@@ -786,6 +786,11 @@
     }
 }
 
+/* Fix HOME hover text color */
+.navbar-nav .nav-item .home-link:hover,
+.navbar-nav .nav-item .home-link.active {
+    color: #d48a42 !important;
+}
 
 .footer-section {
     background: #26272b;
