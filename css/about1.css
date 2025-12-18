@@ -2,6 +2,39 @@
     --bs-secondary: #da8643 !important;
 }
 
+
+/* ================= TOPBAR WHITE TEXT & ICONS ================= */
+
+.topbar {
+  background-color: #e71228;   /* brand red OR use dark color */
+}
+
+/* Make ALL text white */
+.topbar span,
+.topbar div,
+.topbar p {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+/* Make ALL icons white */
+.topbar i {
+  color: #ffffff !important;
+  opacity: 0.95;
+}
+
+/* Remove Bootstrap muted colors */
+.topbar .text-muted,
+.topbar .text-secondary {
+  color: #ffffff !important;
+}
+
+/* Improve spacing & clarity */
+.topbar span {
+  display: inline-flex;
+  align-items: center;
+}
+
 .btn.btn-square:focus {
     outline: 2px solid #d48a42 !important;   /* golden outline */
     outline-offset: 3px !important;          /* small space around icon */
