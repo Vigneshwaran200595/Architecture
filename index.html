@@ -7,6 +7,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +83,43 @@
 
 
 
-        <!-- Topbar Start -->
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
+</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+<div class="nav-item custom-home dropdown">
+    <a href="index.html" class="home-link">Home</a>
+    <span class="arrow-toggle"></span>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="saas.html">Home 2</a>
+    </div>
+</div>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
+                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
+                       <a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
+    Register
+</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+                <!-- Topbar Start -->
         <div class="container-fluid topbar d-none d-xl-block w-100">
             <div class="row gx-0 align-items-center" style="height: 45px;">
                 <div class="col-lg-6 text-center text-lg-start mb-lg-0">
@@ -120,41 +157,6 @@
         </div>
         <!-- Topbar End -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
-                <a href="index.html" class="navbar-brand p-0">
-    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
-</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
-<div class="nav-item custom-home dropdown">
-    <a href="index.html" class="home-link">Home</a>
-    <span class="arrow-toggle"></span>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="saas.html">Home 2</a>
-    </div>
-</div>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
-                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
-                       <a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
-    Register
-</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
 
 <section class="hero-slider">
 
@@ -229,13 +231,13 @@
         <!-- About Start -->
         <section class="about-section">
     <div class="title-box">
-        <h2 class="about-header scroll-animate fadeInTopLeft">About us —</h2>
+        <h2 class="about-header" data-aos="fade-in">About us —</h2>
     </div>
 
     <div class="about-wrapper">
 
         <!-- LEFT CONTENT BOX -->
-        <div class="about-content scroll-animate fadeInTopLeft">
+        <div class="about-content" data-aos="fade-in">
             <div class="content-inner">
                 <h3>We are competitive in<br>architecture solutions</h3>
 
@@ -250,7 +252,7 @@
         </div>
 
         <!-- IMAGE SLIDER -->
-        <div class="about-slider scroll-animate fadeInTopRight">
+        <div class="about-slider">
 
     <div class="aboutslide"><img src="img/slide1.webp"></div>
     <div class="aboutslide"><img src="img/slide2.webp"></div>
@@ -275,7 +277,7 @@
 
     <!-- TITLE -->
     <div class="title-box">
-        <h2 class="about-header scroll-animate fadeInTopLeft">What We Do —</h2>
+        <h2 class="about-header" data-aos="fade-in">What We Do —</h2>
     </div>
 
     <div class="whatwedo-container">
@@ -286,7 +288,7 @@
             <div class="services-row">
 
                 <!-- BOX 1 -->
-                <div class="service-box1 scroll-animate fadeInTopLeft">
+                <div class="service-box1" data-aos="fade-in">
                     <img src="img/step1.webp" alt="">
                     <h4>Interior Design</h4>
                     <div class="line"></div>
@@ -294,7 +296,7 @@
                 </div>
 
                 <!-- BOX 2 -->
-                <div class="service-box1 scroll-animate fadeInTopLeft">
+                <div class="service-box1" data-aos="fade-in">
                     <img src="img/step2.webp" alt="">
                     <h4>Architectur</h4>
                     <div class="line"></div>
@@ -302,7 +304,7 @@
                 </div>
 
                 <!-- BOX 3 -->
-                <div class="service-box1 scroll-animate fadeInTopLeft">
+                <div class="service-box1" data-aos="fade-in">
                     <img src="img/step3.webp" alt="">
                     <h4>Floor Plan</h4>
                     <div class="line"></div>
@@ -312,7 +314,7 @@
             </div>
 
             <!-- BELOW TEXT BOX -->
-            <div class="details-box scroll-animate fadeInTopLeft">
+            <div class="details-box" data-aos="fade-in">
                 <h3>We present the idea with impressive details.</h3>
                 <p>
                     Vivid colors and abstract patterns, combined with unique uses of light, textures, 
@@ -324,7 +326,7 @@
         </div>
 
         <!-- RIGHT SIDE STATIC SCROLLING IMAGE -->
-        <div class="right-scroll-image scroll-animate fadeInTopRight">
+        <div class="right-scroll-image" data-aos="fade-in">
             <img src="img/Move.webp" alt="">
         </div>
 
@@ -341,30 +343,30 @@
     <!-- LEFT SIDE – INFOGRAPHIC -->
     <div class="infographic-area">
 
-        <h2 class="info-title scroll-animate fadeInTopLeft">Infographic <span>–</span></h2>
+        <h2 class="info-title" data-aos="fade-in">Infographic <span>–</span></h2>
 
         <div class="info-grid">
 
             <!-- Box 1 -->
-            <div class="info-box scroll-animate fadeInTopLeft">
+            <div class="info-box" data-aos="fade-in">
                 <h3 class="info-number">24</h3>
                 <p class="info-text">Years of Experience</p>
             </div>
 
             <!-- Box 2 -->
-            <div class="info-box scroll-animate fadeInTopLeft">
+            <div class="info-box" data-aos="fade-in">
                 <h3 class="info-number">340</h3>
                 <p class="info-text">Project Taken</p>
             </div>
 
             <!-- Box 3 -->
-            <div class="info-box scroll-animate fadeInTopLeft">
+            <div class="info-box" data-aos="fade-in">
                 <h3 class="info-number">86</h3>
                 <p class="info-text">Awards Won</p>
             </div>
 
             <!-- Box 4 -->
-            <div class="info-box scroll-animate fadeInTopLeft">
+            <div class="info-box" data-aos="fade-in">
                 <h3 class="info-number">36K</h3>
                 <p class="info-text">Twitter Followers</p>
             </div>
@@ -376,10 +378,10 @@
     <!-- ---------------- RIGHT SIDE : TESTIMONIAL ---------------- -->
     <div class="testimonial-area">
 
-    <h2 class="test-title scroll-animate fadeInTopRight">Testimonial <span>–</span></h2>
+    <h2 class="test-title" data-aos="fade-in">Testimonial <span>–</span></h2>
 
     <!-- SLIDES -->
-    <div class="testimonial-container scroll-animate fadeInTopRight">
+    <div class="testimonial-container" data-aos="fade-in">
 
         <!-- Slide 1 -->
         <div class="testimonial-slide">
@@ -443,12 +445,12 @@
 </section>
 
 <section class="services-section">
-    <h2 class="services-title scroll-animate fadeInTopLeft">All Services —</h2>
+    <h2 class="services-title" data-aos="fade-in">All Services —</h2>
 
     <div class="services-grid">
 
         <!-- SERVICE BOX 01 -->
-        <div class="service-box scroll-animate fadeInTopLeft">
+        <div class="service-box" data-aos="fade-in">
             <div class="service-top">
                 <img src="img/service1.webp" class="service-icon" alt="">
                 <span class="service-num">01</span>
@@ -462,7 +464,7 @@
         </div>
 
         <!-- SERVICE BOX 02 -->
-        <div class="service-box scroll-animate fadeInTopLeft">
+        <div class="service-box" data-aos="fade-in">
             <div class="service-top">
                 <img src="img/service2.webp" class="service-icon" alt="">
                 <span class="service-num">02</span>
@@ -476,7 +478,7 @@
         </div>
 
         <!-- SERVICE BOX 03 -->
-        <div class="service-box scroll-animate fadeInTopLeft">
+        <div class="service-box" data-aos="fade-in">
             <div class="service-top">
                 <img src="img/service3.webp" class="service-icon" alt="">
                 <span class="service-num">03</span>
@@ -490,7 +492,7 @@
         </div>
 
         <!-- SERVICE BOX 04 -->
-        <div class="service-box scroll-animate fadeInTopLeft">
+        <div class="service-box" data-aos="fade-in">
             <div class="service-top">
                 <img src="img/service4.webp" class="service-icon" alt="">
                 <span class="service-num">04</span>
@@ -504,7 +506,7 @@
         </div>
 
         <!-- SERVICE BOX 05 -->
-        <div class="service-box scroll-animate fadeInTopLeft">
+        <div class="service-box" data-aos="fade-in">
             <div class="service-top">
                 <img src="img/service5.webp" class="service-icon" alt="">
                 <span class="service-num">05</span>
@@ -517,7 +519,7 @@
         </div>
 
         <!-- SERVICE BOX 06 -->
-        <div class="service-box scroll-animate fadeInTopLeft">
+        <div class="service-box" data-aos="fade-in">
             <div class="service-top">
                 <img src="img/service6.webp" class="service-icon" alt="">
                 <span class="service-num">06</span>
@@ -534,7 +536,7 @@
 
 <section class="projects-section">
 
-    <div class="projects-header scroll-animate fadeInTopBottom">
+    <div class="projects-header" data-aos="fade-in">
         <span class="line"></span>
         <h2>All Projects</h2>
         <span class="line"></span>
@@ -543,7 +545,7 @@
     <div class="projects-grid">
 
         <!-- PROJECT 01 -->
-        <div class="project-card scroll-animate fadeInTopLeft">
+        <div class="project-card" data-aos="fade-in">
             <img src="img/p1.webp" alt="">
             <div class="overlay">
                 <div class="expand-icon">⤢</div>
@@ -553,7 +555,7 @@
         </div>
 
         <!-- PROJECT 02 -->
-        <div class="project-card scroll-animate fadeInTopLeft">
+        <div class="project-card" data-aos="fade-in">
             <img src="img/p2.webp" alt="">
             <div class="overlay">
                 <div class="expand-icon">⤢</div>
@@ -563,7 +565,7 @@
         </div>
 
         <!-- PROJECT 03 -->
-        <div class="project-card scroll-animate fadeInTopLeft">
+        <div class="project-card" data-aos="fade-in">
             <img src="img/p3.webp" alt="">
             <div class="overlay">
                 <div class="expand-icon">⤢</div>
@@ -573,7 +575,7 @@
         </div>
 
         <!-- PROJECT 04 -->
-        <div class="project-card scroll-animate fadeInTopLeft">
+        <div class="project-card" data-aos="fade-in">
             <img src="img/p4.webp" alt="">
             <div class="overlay">
                 <div class="expand-icon">⤢</div>
@@ -583,7 +585,7 @@
         </div>
 
         <!-- PROJECT 05 -->
-        <div class="project-card scroll-animate fadeInTopLeft">
+        <div class="project-card" data-aos="fade-in">
             <img src="img/p5.webp" alt="">
             <div class="overlay">
                 <div class="expand-icon">⤢</div>
@@ -599,41 +601,41 @@
        
 <section class="clients-section">
 
-    <div class="clients-header scroll-animate fadeInTopLeft">
+    <div class="clients-header" data-aos="fade-in">
         <h2>Our Clients —</h2>
     </div>
 
     <div class="clients-grid">
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c1.webp" alt="">
         </div>
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c2.webp" alt="">
         </div>
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c3.webp" alt="">
         </div>
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c4.webp" alt="">
         </div>
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c5.webp" alt="">
         </div>
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c6.webp" alt="">
         </div>
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c7.webp" alt="">
         </div>
 
-        <div class="client-box scroll-animate fadeInTopLeft">
+        <div class="client-box" data-aos="fade-in">
             <img src="img/c8.webp" alt="">
         </div>
 
@@ -645,13 +647,13 @@
 
 <section class="team-section">
     <div class="title-box">
-        <h2 class="about-header scroll-animate fadeInTopLeft">Our Team —</h2>
+        <h2 class="about-header" data-aos="fade-in">Our Team —</h2>
     </div>
 
     <div class="team-container">
 
         <!-- TEAM CARD -->
-        <div class="team-card scroll-animate fadeInTopLeft">
+        <div class="team-card" data-aos="fade-in">
             <div class="team-img">
                 <img src="img/team1.webp" alt="">
                 <div class="team-overlay"></div>
@@ -671,7 +673,7 @@
         </div>
 
         <!-- Copy same card 3 more times -->
-        <div class="team-card scroll-animate fadeInTopLeft">
+        <div class="team-card" data-aos="fade-in">
             <div class="team-img">
                 <img src="img/team2.webp" alt="">
                 <div class="team-overlay"></div>
@@ -688,7 +690,7 @@
             </div>
         </div>
 
-        <div class="team-card scroll-animate fadeInTopLeft">
+        <div class="team-card" data-aos="fade-in">
             <div class="team-img">
                 <img src="img/team3.webp" alt="">
                 <div class="team-overlay"></div>
@@ -713,13 +715,13 @@
     <div class="footer-container">
 
         <!-- Left Logo & Text -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <img src="img/logo2.webp" class="footer-logo" alt="">
             <p class="footer-text">
                 Crafted specifically for architecture and interior design studios, our template helps you showcase ideas with clarity and elegance.
             </p>
 
-            <div class="footer-social scroll-animate fadeInTopLeft">
+            <div class="footer-social" data-aos="fade-in">
                 <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
                         <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
@@ -728,7 +730,7 @@
         </div>
 
         <!-- Recent Post -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Recent Post</h3>
 
             <div class="post-item">
@@ -764,7 +766,7 @@
         </div>
 
         <!-- Useful Links -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Quick links</h3>
 
             <ul class="footer-links">
@@ -777,7 +779,7 @@
         </div>
 
         <!-- Contact -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Contact Us</h3>
 
             <p class="contact-text">
@@ -793,7 +795,7 @@
     </div>
 
     <!-- Newsletter Row -->
-    <div class="newsletter-row scroll-animate fadeInTopLeft">
+    <div class="newsletter-row" data-aos="fade-in">
         <div class="newsletter-left">
             <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
             <p>Never Miss Anything From Stackly By Signing Up To Our Newsletter.</p>
@@ -805,7 +807,7 @@
 </div>
     </div>
 
-    <div class="footer-bottom scroll-animate fadeInTopLeft">
+    <div class="footer-bottom">
         © 2025 Your Company. Designed By Stackly.
     </div>
 
@@ -1037,6 +1039,21 @@ function scrollAnimation() {
 
 window.addEventListener("scroll", scrollAnimation);
 scrollAnimation();
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 80
+  });
+
+  window.addEventListener('load', () => {
+    AOS.refresh();
+  });
 </script>
 
 

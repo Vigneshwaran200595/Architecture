@@ -7,6 +7,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +31,41 @@
     <body>
 
 
-        <!-- Topbar Start -->
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <a href="saas.html" class="navbar-brand p-0">
+    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
+</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+<div class="nav-item custom-home dropdown">
+    <a href="saas.html" class="home-link">Home</a>
+    <span class="arrow-toggle"></span>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="index.html">Home 1</a>
+    </div>
+</div>
+                        <a href="about1.html" class="nav-item nav-link">About</a>
+                        <a href="service1.html" class="nav-item nav-link">Services</a>
+                        <a href="projects1.html" class="nav-item nav-link">Projects</a>
+                        <a href="faq.html" class="nav-item nav-link">Faq</a>
+                        <a href="contact1.html" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
+<a href="login1.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
+    Register
+</a>                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar & Hero End -->
+
+ <!-- Topbar Start -->
         <div class="container-fluid topbar d-none d-xl-block w-100">
             <div class="row gx-0 align-items-center" style="height: 45px;">
                 <div class="col-lg-6 text-center text-lg-start mb-lg-0">
@@ -68,41 +103,6 @@
         </div>
         <!-- Topbar End -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
-                <a href="saas.html" class="navbar-brand p-0">
-    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
-</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
-<div class="nav-item custom-home dropdown">
-    <a href="saas.html" class="home-link">Home</a>
-    <span class="arrow-toggle"></span>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="index.html">Home 1</a>
-    </div>
-</div>
-                        <a href="about1.html" class="nav-item nav-link">About</a>
-                        <a href="service1.html" class="nav-item nav-link">Services</a>
-                        <a href="projects1.html" class="nav-item nav-link">Projects</a>
-                        <a href="faq.html" class="nav-item nav-link">Faq</a>
-                        <a href="contact1.html" class="nav-item nav-link">Contact Us</a>
-                    </div>
-                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
-<a href="login1.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
-    Register
-</a>                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
-
 <!-- ABOUT US HERO SECTION -->
 <section class="about-hero">
     <div class="about-overlay"></div>
@@ -123,7 +123,7 @@
     <div class="faq-container">
 
         <!-- LEFT SIDE STATIC FAQ -->
-        <div class="faq-left" data-animate="backInLeft">
+        <div class="faq-left" data-aos="fade-in">
             <h1 class="faq-title">FAQ <span>–</span></h1>
 
             <h2>How do we work?</h2>
@@ -147,7 +147,7 @@
         </div>
 
         <!-- RIGHT SIDE ACCORDION -->
-        <div class="faq-right" data-animate="backInRight">
+        <div class="faq-right"data-aos="fade-in">
 
             <div class="faq-item">
                 <button class="faq-question">
@@ -212,13 +212,13 @@
     <div class="footer-container">
 
         <!-- Left Logo & Text -->
-        <div class="footer-col" data-animate="backInLeft">
+        <div class="footer-col" data-aos="fade-in">
             <img src="img/logo2.webp" class="footer-logo" alt="">
             <p class="footer-text">
                 Crafted specifically for architecture and interior design studios, our template helps you showcase ideas with clarity and elegance.
             </p>
 
-            <div class="footer-social" data-animate="backInLeft">
+            <div class="footer-social" data-aos="fade-in">
                 <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
                         <a href="404_1.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
@@ -227,7 +227,7 @@
         </div>
 
         <!-- Recent Post -->
-        <div class="footer-col" data-animate="backInLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Recent Post</h3>
 
             <div class="post-item">
@@ -263,7 +263,7 @@
         </div>
 
         <!-- Useful Links -->
-        <div class="footer-col" data-animate="backInLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Quick links</h3>
 
             <ul class="footer-links">
@@ -276,7 +276,7 @@
         </div>
 
         <!-- Contact -->
-        <div class="footer-col" data-animate="backInLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Contact Us</h3>
 
             <p class="contact-text">
@@ -293,12 +293,12 @@
 
     <!-- Newsletter Row -->
     <div class="newsletter-row">
-        <div class="newsletter-left" data-animate="backInLeft">
+        <div class="newsletter-left" data-aos="fade-in">
             <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
             <p>Never Miss Anything From Stackly By Signing Up To Our Newsletter.</p>
         </div>
 
-   <div class="newsletter-box" data-animate="backInLeft">
+   <div class="newsletter-box" data-aos="fade-in">
     <input type="email" id="newsletterEmail" placeholder="ENTER YOUR EMAIL">
     <button onclick="subscribeNewsletter()">✈</button>
 </div>
@@ -434,6 +434,20 @@ window.addEventListener("scroll", scrollAnimation);
 scrollAnimation();
 </script>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 80
+  });
+
+  window.addEventListener('load', () => {
+    AOS.refresh();
+  });
+</script>
 
 
     </body>

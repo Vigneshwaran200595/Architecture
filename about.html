@@ -7,6 +7,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +27,41 @@
 
     <body>
 
- <!-- Topbar Start -->
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
+</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+<div class="nav-item custom-home dropdown">
+    <a href="index.html" class="home-link">Home</a>
+    <span class="arrow-toggle"></span>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="saas.html">Home 2</a>
+    </div>
+</div>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
+                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
+<a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
+    Register
+</a>                    </div>
+                </div>
+            </nav>
+        </div>        <!-- Navbar & Hero End -->
+
+
+         <!-- Topbar Start -->
         <div class="container-fluid topbar d-none d-xl-block w-100">
             <div class="row gx-0 align-items-center" style="height: 45px;">
                 <div class="col-lg-6 text-center text-lg-start mb-lg-0">
@@ -64,48 +99,16 @@
         </div>
         <!-- Topbar End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
-                <a href="index.html" class="navbar-brand p-0">
-    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
-</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
-<div class="nav-item custom-home dropdown">
-    <a href="index.html" class="home-link">Home</a>
-    <span class="arrow-toggle"></span>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="saas.html">Home 2</a>
-    </div>
-</div>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
-                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
-<a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
-    Register
-</a>                    </div>
-                </div>
-            </nav>
-        </div>        <!-- Navbar & Hero End -->
 
 <section class="about-hero">
-    <div class="about-hero-content scroll-animate fadeInTopLeft">
+    <div class="about-hero-content" data-aos="fade-in">
         <h1>About Company</h1>
         <p>
             The essence of interior design will always be about people and how they live. 
             It is about the realities of what makes for an attractive, civilized.
         </p>
 
-        <div class="breadcrumb-box scroll-animate fadeInTopLeft">
+        <div class="breadcrumb-box" data-aos="fade-in">
             <a href="index.html">Home</a>
             <span>»</span>
             <span class="active">About</span>
@@ -117,12 +120,12 @@
     <div class="feature-wrapper">
 
         <!-- LEFT IMAGE -->
-        <div class="feature-left scroll-animate fadeInTopLeft">
+        <div class="feature-left" data-aos="fade-in">
             <img src="img/about.webp" alt="Feature Image">
         </div>
 
         <!-- RIGHT CONTENT -->
-        <div class="feature-right scroll-animate fadeInTopRight">
+        <div class="feature-right" data-aos="fade-in">
             <div class="feature-border"></div>
 
             <h2>Our floors are designed to<br>last a lifetime</h2>
@@ -140,12 +143,12 @@
 </section>
 
 <section class="what-section">
-    <h2 class="what-title scroll-animate fadeInTopLeft">What We do <span>—</span></h2>
+    <h2 class="what-title" data-aos="fade-in">What We do <span>—</span></h2>
 
     <div class="what-container">
 
         <!-- SERVICE 1 -->
-        <div class="what-card scroll-animate fadeInTopLeft">
+        <div class="what-card" data-aos="fade-in">
             <div class="img-box">
                 <img src="img/step1.webp" alt="">
             </div>
@@ -158,7 +161,7 @@
         </div>
 
         <!-- SERVICE 2 -->
-        <div class="what-card scroll-animate fadeInTopLeft">
+        <div class="what-card" data-aos="fade-in">
             <div class="img-box">
                 <img src="img/step2.webp" alt="">
             </div>
@@ -171,7 +174,7 @@
         </div>
 
         <!-- SERVICE 3 -->
-        <div class="what-card scroll-animate fadeInTopLeft">
+        <div class="what-card" data-aos="fade-in">
             <div class="img-box">
                 <img src="img/step3.webp" alt="">
             </div>
@@ -187,14 +190,14 @@
 </section>
 
 <section class="achieve-section">
-    <div class="achieve-title scroll-animate fadeInTopLeft">
+    <div class="achieve-title" data-aos="fade-in">
         <h2>— We Achieved —</h2>
     </div>
 
     <div class="achieve-grid">
 
         <!-- 2015 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>15</h3>
                 <span>Jan</span>
@@ -207,7 +210,7 @@
         </div>
 
         <!-- 2016 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>07</h3>
                 <span>Mar</span>
@@ -220,7 +223,7 @@
         </div>
 
         <!-- 2017 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>19</h3>
                 <span>July</span>
@@ -233,7 +236,7 @@
         </div>
 
         <!-- 2018 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>27</h3>
                 <span>May</span>
@@ -246,7 +249,7 @@
         </div>
 
         <!-- 2019 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>11</h3>
                 <span>Dec</span>
@@ -259,7 +262,7 @@
         </div>
 
         <!-- 2020 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>05</h3>
                 <span>Apr</span>
@@ -272,7 +275,7 @@
         </div>
 
         <!-- 2021 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>14</h3>
                 <span>Feb</span>
@@ -285,7 +288,7 @@
         </div>
 
         <!-- 2022 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>30</h3>
                 <span>Aug</span>
@@ -298,7 +301,7 @@
         </div>
 
         <!-- 2023 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>21</h3>
                 <span>Nov</span>
@@ -311,7 +314,7 @@
         </div>
 
         <!-- 2024 -->
-        <div class="achieve-card scroll-animate fadeInTopLeft">
+        <div class="achieve-card" data-aos="fade-in">
             <div class="achieve-date">
                 <h3>12</h3>
                 <span>Sep</span>
@@ -328,12 +331,12 @@
 
 <section class="experts-section">
 
-    <h2 class="experts-title scroll-animate fadeInTopLeft">— Our Experts —</h2>
+    <h2 class="experts-title" data-aos="fade-in">— Our Experts —</h2>
 
     <div class="experts-grid">
 
         <!-- Expert 1 -->
-        <div class="expert-card scroll-animate fadeInTopLeft">
+        <div class="expert-card" data-aos="fade-in">
             <div class="expert-img">
                 <img src="img/team1.webp" alt="Expert 1">
                 <div class="expert-social">
@@ -351,7 +354,7 @@
         </div>
 
         <!-- Expert 2 -->
-        <div class="expert-card scroll-animate fadeInTopLeft">
+        <div class="expert-card" data-aos="fade-in">
             <div class="expert-img">
                 <img src="img/team2.webp" alt="Expert 2">
                 <div class="expert-social">
@@ -369,7 +372,7 @@
         </div>
 
         <!-- Expert 3 -->
-        <div class="expert-card scroll-animate fadeInTopLeft">
+        <div class="expert-card" data-aos="fade-in">
             <div class="expert-img">
                 <img src="img/team3.webp" alt="Expert 3">
                 <div class="expert-social">
@@ -394,13 +397,13 @@
     <div class="footer-container">
 
         <!-- Left Logo & Text -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <img src="img/logo2.webp" class="footer-logo" alt="">
             <p class="footer-text">
                 Crafted specifically for architecture and interior design studios, our template helps you showcase ideas with clarity and elegance.
             </p>
 
-            <div class="footer-social scroll-animate fadeInTopLeft">
+            <div class="footer-social" data-aos="fade-in">
                 <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
                         <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
@@ -409,7 +412,7 @@
         </div>
 
         <!-- Recent Post -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Recent Post</h3>
 
             <div class="post-item">
@@ -445,7 +448,7 @@
         </div>
 
         <!-- Useful Links -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Quick links</h3>
 
             <ul class="footer-links">
@@ -458,7 +461,7 @@
         </div>
 
         <!-- Contact -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Contact Us</h3>
 
             <p class="contact-text">
@@ -474,7 +477,7 @@
     </div>
 
     <!-- Newsletter Row -->
-    <div class="newsletter-row scroll-animate fadeInTopLeft">
+    <div class="newsletter-row" data-aos="fade-in">
         <div class="newsletter-left">
             <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
             <p>Never Miss Anything From Stackly By Signing Up To Our Newsletter.</p>
@@ -486,7 +489,7 @@
 </div>
     </div>
 
-    <div class="footer-bottom scroll-animate fadeInTopLeft">
+    <div class="footer-bottom">
         © 2025 Your Company. Designed By Stackly.
     </div>
 
@@ -581,6 +584,20 @@ window.addEventListener("scroll", scrollAnimation);
 scrollAnimation();
 </script>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 80
+  });
+
+  window.addEventListener('load', () => {
+    AOS.refresh();
+  });
+</script>
 
 
         

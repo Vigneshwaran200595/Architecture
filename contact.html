@@ -7,7 +7,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
-
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,40 @@
     </head>
 
     <body>
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid sticky-top px-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
+                <a href="index.html" class="navbar-brand p-0">
+    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
+</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
+<div class="nav-item custom-home dropdown">
+    <a href="index.html" class="home-link">Home</a>
+    <span class="arrow-toggle"></span>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="saas.html">Home 2</a>
+    </div>
+</div>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
+                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
+<a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
+    Register
+</a>                    </div>
+                </div>
+            </nav>
+        </div>        <!-- Navbar & Hero End -->
+
 
         <!-- Topbar Start -->
         <div class="container-fluid topbar d-none d-xl-block w-100">
@@ -65,47 +99,14 @@
         <!-- Topbar End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid sticky-top px-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-light py-3 px-4">
-                <a href="index.html" class="navbar-brand p-0">
-    <img src="img/logo2.webp" alt="Logo" style="height: 55px;">
-</a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto pt-2 pt-lg-0">
-<div class="nav-item custom-home dropdown">
-    <a href="index.html" class="home-link">Home</a>
-    <span class="arrow-toggle"></span>
-    <div class="dropdown-menu">
-        <a class="dropdown-item" href="saas.html">Home 2</a>
-    </div>
-</div>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="dashboard.html" class="nav-item nav-link">Dashboard</a>
-                        <a href="blog.html" class="nav-item nav-link">Our Blogs</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
-<a href="login.html" class="btn btn-secondary py-2 px-4 flex-wrap flex-sm-shrink-0 register-btn">
-    Register
-</a>                    </div>
-                </div>
-            </nav>
-        </div>        <!-- Navbar & Hero End -->
-
 <section class="about-hero">
-    <div class="about-hero-content scroll-animate fadeInTopLeft">
+    <div class="about-hero-content" data-aos="fade-in">
         <h1>Contact Us</h1>
         <p>
             The essence of interior design will always be about people and how they live. It is about the realities of what makes for an attractive, civilized.
         </p>
 
-        <div class="breadcrumb-box scroll-animate fadeInTopLeft">
+        <div class="breadcrumb-box" data-aos="fade-in">
             <a href="index.html">Home</a>
             <span>»</span>
             <span class="active">Contact</span>
@@ -115,7 +116,7 @@
 
 <!-- CONTACT SECTION -->
 <section class="contact-section">
-    <div class="contact-left scroll-animate fadeInTopLeft">
+    <div class="contact-left" data-aos="fade-in">
         <h2 class="box-title">Form <span>—</span></h2>
 
         <form id="contactForm">
@@ -134,7 +135,7 @@
         </form>
     </div>
 
-    <div class="contact-right scroll-animate fadeInTopRight">
+    <div class="contact-right" data-aos="fade-in">
         <h2 class="box-title">Info <span>—</span></h2>
 
         <div class="info-item">
@@ -164,7 +165,7 @@
 </section>
 
 <!-- MAP SECTION START -->
-<section class="map-section scroll-animate fadeInTopLeft">
+<section class="map-section" data-aos="fade-in">
     <h2 class="map-title">Find Us Our Company</h2>
 
     <div class="map-container">
@@ -185,13 +186,13 @@
     <div class="footer-container">
 
         <!-- Left Logo & Text -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <img src="img/logo2.webp" class="footer-logo" alt="">
             <p class="footer-text">
                 Crafted specifically for architecture and interior design studios, our template helps you showcase ideas with clarity and elegance.
             </p>
 
-            <div class="footer-social scroll-animate fadeInTopLeft">
+            <div class="footer-social" data-aos="fade-in">
                 <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
                         <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
                         <a href="404.html" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
@@ -200,7 +201,7 @@
         </div>
 
         <!-- Recent Post -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Recent Post</h3>
 
             <div class="post-item">
@@ -236,7 +237,7 @@
         </div>
 
         <!-- Useful Links -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Quick links</h3>
 
             <ul class="footer-links">
@@ -249,7 +250,7 @@
         </div>
 
         <!-- Contact -->
-        <div class="footer-col scroll-animate fadeInTopLeft">
+        <div class="footer-col" data-aos="fade-in">
             <h3 class="footer-title">Contact Us</h3>
 
             <p class="contact-text">
@@ -265,7 +266,7 @@
     </div>
 
     <!-- Newsletter Row -->
-    <div class="newsletter-row scroll-animate fadeInTopLeft">
+    <div class="newsletter-row" data-aos="fade-in">
         <div class="newsletter-left">
             <h4>SUBSCRIBE TO OUR NEWSLETTER!</h4>
             <p>Never Miss Anything From Stackly By Signing Up To Our Newsletter.</p>
@@ -277,7 +278,7 @@
 </div>
     </div>
 
-    <div class="footer-bottom scroll-animate fadeInTopLeft">
+    <div class="footer-bottom">
         © 2025 Your Company. Designed By Stackly.
     </div>
 
@@ -416,6 +417,20 @@ window.addEventListener("scroll", scrollAnimation);
 scrollAnimation();
 </script>
 
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 80
+  });
+
+  window.addEventListener('load', () => {
+    AOS.refresh();
+  });
+</script>
 
     </body>
 
